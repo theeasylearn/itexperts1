@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * 
+        {
+            margin:0px;
+        }
+        body 
+        {
+            background-color: blanchedalmond;
+        }
+        h1 
+        {
+            color:white;
+            text-decoration: underline;
+        }
+        span
+        {
+            color: yellow; 
+            text-transform: uppercase;
+            font-weight: bold;
+            font-style: italic;
+        }
+        /* class selector */
+        .logo 
+        {
+            height: 96px;
+            width:96px;
+        }
+        .site-heading 
+        {
+            display: flex;
+            background-color: brown;
+            justify-content: space-between; 
+            /* horizontal alignment */
+            align-items: center;
+            /* vertical alignment */
+            position: sticky;
+            left:0px;
+            top: 0px;
+            box-shadow: 5px 5px 5px gray;
+        }
+
+        .menu 
+        {
+            display: flex;
+            gap: 10px;
+            list-style-type: none;
+        }
+        .menu_link 
+        {
+            color:brown;
+            padding:10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: large;
+            background-color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-heading">
+        <img class="logo" src="images/logo.png" alt="">
+        <h1>Spice<span>Saga</span></h1>
+        <ul class="menu">
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+        </ul>
+    </header>
+    <section>
+        <article>
+            <a href="#">
+                <header>Palak Paneer</header>
+                <img src="https://picsum.photos/200" alt="Palak Paneer">
+                <p>Palak paneer is a popular North Indian curry made with spinach and paneer (cottage cheese) in a flavorful tomato-based sauce.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Aloo Gobi</header>
+                <img src="https://picsum.photos/200" alt="Aloo Gobi">
+                <p>Aloo Gobi is a dry curry made with potatoes (aloo) and cauliflower (gobi) seasoned with spices, a simple and tasty dish.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Baingan Bharta</header>
+                <img src="https://picsum.photos/200" alt="Baingan Bharta">
+                <p>Baingan Bharta is a smoky-flavored eggplant dish where roasted and mashed eggplant is cooked with spices and tomatoes.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Gobi Manchurian</header>
+                <img src="https://picsum.photos/200" alt="Gobi Manchurian">
+                <p>Gobi Manchurian is a popular Indo-Chinese dish featuring crispy fried cauliflower florets tossed in a tangy and spicy sauce.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Mixed Vegetable Curry</header>
+                <img src="https://picsum.photos/200" alt="Mixed Vegetable Curry">
+                <p>A flavorful curry made with a mix of colorful vegetables in a spiced tomato-based gravy, perfect with rice or bread.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Bhindi Masala</header>
+                <img src="https://picsum.photos/200" alt="Bhindi Masala">
+                <p>Bhindi Masala is a dry curry made with okra (bhindi) sautéed with spices, onions, and tomatoes, a delicious side dish.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Vegetable Biryani</header>
+                <img src="https://picsum.photos/200" alt="Vegetable Biryani">
+                <p>Aromatic and flavorful vegetable biryani made with basmati rice, mixed vegetables, and a blend of spices.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Methi Thepla</header>
+                <img src="https://picsum.photos/200" alt="Methi Thepla">
+                <p>Methi Thepla is a popular Gujarati flatbread made with whole wheat flour, fenugreek leaves, and spices.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Chana Masala</header>
+                <img src="https://picsum.photos/200" alt="Chana Masala">
+                <p>Chana Masala is a flavorful and protein-packed curry made with chickpeas, tomatoes, and various spices.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Spinach Mushroom Curry</header>
+                <img src="https://picsum.photos/200" alt="Spinach Mushroom Curry">
+                <p>Delicious curry made with fresh spinach, mushrooms, and a blend of aromatic spices.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Kadai Vegetable</header>
+                <img src="https://picsum.photos/200" alt="Kadai Vegetable">
+                <p>Kadai Vegetable is a flavorful stir-fried dish made with a variety of vegetables, spices, and bell peppers.</p>
+            </a>
+        </article>
+    
+        <article>
+            <a href="#">
+                <header>Cabbage Thoran</header>
+                <img src="https://picsum.photos/200" alt="Cabbage Thoran">
+                <p>Cabbage Thoran is a South Indian dish made with shredded cabbage, coconut, and mild spices.</p>
+            </a>
+        </article>
+    </section>
+    
+    <footer>
+
+    </footer>
+</body>
+
+</html>
