@@ -1,0 +1,24 @@
+/* external stylesheet */
+*
+{
+    margin: 0px;
+}
+body {
+    background-color: #fdebd0; /* Cream */
+}
+article>span
+{
+    display: flex;
+    gap: 30px;
+}
+article>span>aside
+{
+    width:25%;
+    background-color: #fef5e7; /* Cream */
+    box-shadow: 5px 5px 5px gray;
+
+}
+article>span>div 
+{
+    width:75%;
+}
