@@ -5,62 +5,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <style>
-        * 
-        {
-            margin:0px;
+        /* internal stylesheet */
+
+        /* universal selector */
+        * {
+            margin: 0px;
         }
-        body 
-        {
+
+        /* type selector */
+        body {
             background-color: blanchedalmond;
         }
-        h1 
-        {
-            color:white;
+
+        h1 {
+            color: white;
             text-decoration: underline;
         }
-        span
-        {
-            color: yellow; 
+
+        span {
+            color: yellow;
             text-transform: uppercase;
             font-weight: bold;
             font-style: italic;
         }
+
         /* class selector */
-        .logo 
-        {
+        .logo {
             height: 96px;
-            width:96px;
+            width: 96px;
         }
-        .site-heading 
-        {
+
+        .site-heading {
             display: flex;
             background-color: brown;
-            justify-content: space-between; 
+            justify-content: space-between;
             /* horizontal alignment */
             align-items: center;
             /* vertical alignment */
             position: sticky;
-            left:0px;
+            left: 0px;
             top: 0px;
             box-shadow: 5px 5px 5px gray;
+            font-family: "Merriweather", serif;
         }
 
-        .menu 
-        {
+        .menu {
             display: flex;
             gap: 10px;
             list-style-type: none;
         }
-        .menu_link 
-        {
-            color:brown;
-            padding:10px;
+
+        .menu_link {
+            color: brown;
+            padding: 10px;
             text-decoration: none;
             text-transform: uppercase;
             font-size: large;
             background-color: white;
             border-radius: 10px;
+        }
+
+        section {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        article {
+            box-sizing: border-box;
+            width: calc(25% - 20px);
+            border: 1px solid brown;
+            text-align: center;
+            background-color: #fff7eb;
+        }
+
+        /* if header is direct child of article */
+        article>a>header {
+            background-color: brown;
+            padding: 10px;
+            color: white;
+            font-size: x-large;
+            text-align: center;
+            text-transform: uppercase;
+            height: 50px;
+        }
+
+        article>a>img {
+            border-radius: 100%;
+            margin-top: 10px;
+        }
+
+        article>a {
+            text-decoration: none !important;
+            color: brown;
+        }
+
+        article>a>p {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: large;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: "Open Sans", sans-serif;
         }
     </style>
 </head>
@@ -83,74 +145,83 @@
             <a href="#">
                 <header>Palak Paneer</header>
                 <img src="https://picsum.photos/200" alt="Palak Paneer">
-                <p>Palak paneer is a popular North Indian curry made with spinach and paneer (cottage cheese) in a flavorful tomato-based sauce.</p>
+                <p>Palak paneer is a popular North Indian curry made with spinach and paneer (cottage cheese) in a
+                    flavorful tomato-based sauce.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Aloo Gobi</header>
                 <img src="https://picsum.photos/200" alt="Aloo Gobi">
-                <p>Aloo Gobi is a dry curry made with potatoes (aloo) and cauliflower (gobi) seasoned with spices, a simple and tasty dish.</p>
+                <p>Aloo Gobi is a dry curry made with potatoes (aloo) and cauliflower (gobi) seasoned with spices, a
+                    simple and tasty dish.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Baingan Bharta</header>
                 <img src="https://picsum.photos/200" alt="Baingan Bharta">
-                <p>Baingan Bharta is a smoky-flavored eggplant dish where roasted and mashed eggplant is cooked with spices and tomatoes.</p>
+                <p>Baingan Bharta is a smoky-flavored eggplant dish where roasted and mashed eggplant is cooked with
+                    spices and tomatoes.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Gobi Manchurian</header>
                 <img src="https://picsum.photos/200" alt="Gobi Manchurian">
-                <p>Gobi Manchurian is a popular Indo-Chinese dish featuring crispy fried cauliflower florets tossed in a tangy and spicy sauce.</p>
+                <p>Gobi Manchurian is a popular Indo-Chinese dish featuring crispy fried cauliflower florets tossed in a
+                    tangy and spicy sauce.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Mixed Vegetable Curry</header>
                 <img src="https://picsum.photos/200" alt="Mixed Vegetable Curry">
-                <p>A flavorful curry made with a mix of colorful vegetables in a spiced tomato-based gravy, perfect with rice or bread.</p>
+                <p>A flavorful curry made with a mix of colorful vegetables in a spiced tomato-based gravy, perfect with
+                    rice or bread.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Bhindi Masala</header>
                 <img src="https://picsum.photos/200" alt="Bhindi Masala">
-                <p>Bhindi Masala is a dry curry made with okra (bhindi) sautéed with spices, onions, and tomatoes, a delicious side dish.</p>
+                <p>Bhindi Masala is a dry curry made with okra (bhindi) sautéed with spices, onions, and tomatoes, a
+                    delicious side dish.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Vegetable Biryani</header>
                 <img src="https://picsum.photos/200" alt="Vegetable Biryani">
-                <p>Aromatic and flavorful vegetable biryani made with basmati rice, mixed vegetables, and a blend of spices.</p>
+                <p>Aromatic and flavorful vegetable biryani made with basmati rice, mixed vegetables, and a blend of
+                    spices.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Methi Thepla</header>
                 <img src="https://picsum.photos/200" alt="Methi Thepla">
-                <p>Methi Thepla is a popular Gujarati flatbread made with whole wheat flour, fenugreek leaves, and spices.</p>
+                <p>Methi Thepla is a popular Gujarati flatbread made with whole wheat flour, fenugreek leaves, and
+                    spices.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Chana Masala</header>
                 <img src="https://picsum.photos/200" alt="Chana Masala">
-                <p>Chana Masala is a flavorful and protein-packed curry made with chickpeas, tomatoes, and various spices.</p>
+                <p>Chana Masala is a flavorful and protein-packed curry made with chickpeas, tomatoes, and various
+                    spices.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Spinach Mushroom Curry</header>
@@ -158,15 +229,16 @@
                 <p>Delicious curry made with fresh spinach, mushrooms, and a blend of aromatic spices.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Kadai Vegetable</header>
                 <img src="https://picsum.photos/200" alt="Kadai Vegetable">
-                <p>Kadai Vegetable is a flavorful stir-fried dish made with a variety of vegetables, spices, and bell peppers.</p>
+                <p>Kadai Vegetable is a flavorful stir-fried dish made with a variety of vegetables, spices, and bell
+                    peppers.</p>
             </a>
         </article>
-    
+
         <article>
             <a href="#">
                 <header>Cabbage Thoran</header>
@@ -175,9 +247,10 @@
             </a>
         </article>
     </section>
-    
-    <footer>
 
+    <footer>
+        <p>Developed By :- Team ITExperts, Bhavnagar</p>
+        <p>Mobile no :- 1234567890, Email : info@itexperts.com</p>
     </footer>
 </body>
 
