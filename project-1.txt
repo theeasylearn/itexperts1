@@ -16,7 +16,7 @@ types of web page
             https://gujarati.foodviva.com/paneer-recipes/
     3) recipe detail page (36 pages)
         1 design pattern 
-        https://gujarati.foodviva.com/curry-recipes/shahi-paneer-recipe/print/
+        https://gujarati.foodviva.com/curry-recipes/shahi-paneer-recipe
 
         also display recipe of the same category 
         

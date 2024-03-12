@@ -11,13 +11,13 @@
 <body>
     <article>
         <header>
-            <h1>Shahi Paneer</h1>
+            <h1 class="heading">Shahi Paneer</h1>
         </header>
         <span>
             <aside>
-                <h2>Paneer Recipe Ingredients</h2>
+                <h2 class="sub-heading">Paneer Recipe Ingredients</h2>
     
-                <ul>
+                <ul class="ingredients">
                     <li>250 gms Paneer (cottage cheese), cubed into 1-inch pieces</li>
                     <li>1 medium Tomato, crushed</li>
                     <li>2 medium Onions</li>
@@ -44,19 +44,22 @@
                 </ul>
             </aside>
             <div>
-                <p>
-                    It is a delicious North Indian curry made with paneer (cottage cheese) and tomato based spicy gravy
-                    laced with spices. This is a traditional recipe that has been followed from generations and has been
-                    mainstay preparation in Indian cuisine since the time of Moguls. This shahi paneer recipe uses cashew
-                    nut based tomato gravy to bring in the rich texture and flavor.
-                </p>
-                <figure>
-                    <img src="images/shahi-paneer-recipe.jpg" alt="">
-                    <figcaption>Shahi panner recipe</figcaption>
-                </figure>
+                <div class="introduction">
+                  
+                    <figure class="recipe-image-box">
+                        <img class="recipe-image" src="images/shahi-paneer-recipe.jpg" alt="">
+                        <figcaption>Shahi panner recipe</figcaption>
+                    </figure>
+                    <p class="introduction-text">
+                        It is a delicious North Indian curry made with paneer (cottage cheese) and tomato based spicy gravy
+                        laced with spices. This is a traditional recipe that has been followed from generations and has been
+                        mainstay preparation in Indian cuisine since the time of Moguls. This shahi paneer recipe uses cashew
+                        nut based tomato gravy to bring in the rich texture and flavor.
+                    </p>
+                </div>
                 <table>
                     <tr>
-                        <td><img src="https://picsum.photos/100" alt="Random Image"></td>
+                        <td><img  src="https://picsum.photos/100" alt="Random Image"></td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum feugiat urna vel odio
                             fermentum...</td>
                     </tr>
@@ -121,6 +124,34 @@
         </span>
 
     </article>
+
+    <h3 class="sub-heading">You may also like this</h3>
+    <section class="releted_recipes">
+        <article>
+            <figure>
+                <img src="https://picsum.photos/150?random=1" alt="">
+                <figcaption><h3>Paneer Bhurji</h3></figcaption>
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="https://picsum.photos/150?random=2" alt="">
+                <figcaption><h3>Paneer Butter Masala</h3></figcaption>
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="https://picsum.photos/150?random=3" alt="">
+                <figcaption><h3>Paneer Angara</h3></figcaption>
+            </figure>
+        </article>
+        <article>
+            <figure>
+                <img src="https://picsum.photos/150?random=4" alt="">
+                <figcaption><h3>Paneer Bhangara</h3></figcaption>
+            </figure>
+        </article>
+    </section>
 </body>
 
 </html>
