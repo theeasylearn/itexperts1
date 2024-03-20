@@ -1,0 +1,3 @@
+http response code
+https://chat.openai.com/share/fe627d3f-a28a-4933-86e6-6d4f5fb8d6b0
+

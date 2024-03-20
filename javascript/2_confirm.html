@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>example of confirm dialog box</h1>
+    <hr />
+    <p align="right">
+        <a href="success.html" onclick="return ConfirmSubscription();">Activate Subscription</a>
+    </p>
+
+    <script>
+        //create user defined function 
+        function ConfirmSubscription() {
+            // alert('hi');
+            let response = confirm("are you sure, you want to do this?");
+            if (response === true) {
+                alert('Congratulation, for being part of team');
+                return true;
+            }
+            else
+             {
+                alert('Thanks, for response');
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

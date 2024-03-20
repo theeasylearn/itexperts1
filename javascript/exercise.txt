@@ -1,0 +1,14 @@
+1) write a javascript code to accept amount, rate, year from user. calculate and display simple interest using document.write method.
+
+
+2) write a javascript code to accept hours and minutes from user in two different variable. calculate and display total minutes using alert. 
+
+3) write a javascript code to accept temprature from user in ceilcius format. calculate & display it in farenheit format. 
+
+4) write a javascript code to accept products production cost and sales cost. calculate and display profit/loss with message using document.write method. also calculate & display profit or loss rate. 
+
+5) write a javascript code two accept 2 digit number from user. for example 58. display it in words like five eight. 
+
+amount = 58
+last_digit = 58 % 10 
+amount = amount / 10; // 5
