@@ -12,3 +12,14 @@
 amount = 58
 last_digit = 58 % 10 
 amount = amount / 10; // 5
+
+
+6 7 and 8 number exercise has to be developed using coniditional operator
+--------------------------------------------------------------------------
+6) write javascript code to accept time from user in 24 hours format and then display time in 12 hours format with AM / PM suffix 
+input : 18:00 output 06:00 PM
+input : 11:00 output 11:00 AM
+
+7) write javascript code to accept positive integer from user. if given number is odd then calculate squre else calculate qube and display it 
+
+8) write javascript code to accept year. if year is leap year display message this year has 366 days. else display this year has 365 day.
