@@ -23,3 +23,6 @@ input : 11:00 output 11:00 AM
 7) write javascript code to accept positive integer from user. if given number is odd then calculate squre else calculate qube and display it 
 
 8) write javascript code to accept year. if year is leap year display message this year has 366 days. else display this year has 365 day.
+
+9) write javascript code to display multiplication table between given range. for guidance about how to display it refer below url
+https://www.cuemath.com/multiplication-tables/tables-1-to-10/

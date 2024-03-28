@@ -61,7 +61,8 @@
         function GenerateTable() {
             var rowcount = parseInt(document.getElementById('rowcount').value);
             var colcount = parseInt(document.getElementById('columncount').value);
-            var loopchoice = parseInt(document.getElementById('loopchoice').value)
+            var loopchoice = parseInt(document.getElementById('loopchoice').value);
+            var mytable = document.getElementById('mytable');
             var content = ` <table border="1" width="100%">`;
             if (loopchoice === 1) {
                 var i = 1;
@@ -79,27 +80,33 @@
                     i = i + 1;
                 }
                 content += `</table>`;
-                var mytable = document.getElementById('mytable');
                 mytable.innerHTML = content;
             }
-            else if(loopchoice === 3)
-            {
+            else if (loopchoice === 3) {
                 var i = 1;
                 //entry control loop
-                do
-                {
+                do {
                     content += `<tr>`;
                     var j = 1;
-                    do
-                    {
+                    do {
                         content += `<td>BHARAT</td>`;
                         j = j + 1;
-                    }while (j <= colcount); // inner loop
+                    } while (j <= colcount); // inner loop
                     content += `</tr>`;
                     i = i + 1;
                 } while (i <= rowcount); //outer loop
                 content += `</table>`;
-                var mytable = document.getElementById('mytable');
+                mytable.innerHTML = content;
+            }
+            else if (loopchoice === 2) {
+                for (let i = 1; i <= rowcount; i = i + 1) {
+                    content += `<tr>`;
+                    for(let j=1;j<=colcount;j=j+1)    
+                    {
+                        content += `<td>bharat</td>`;
+                    }
+                    content += `</tr>`;
+                }
                 mytable.innerHTML = content;
             }
             return false; //required to prevent reloading page
