@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .active-text-box 
+        {
+            background-color: yellow;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table border="1" cellpadding="10" width="80%" align="center">
+            <tr>
+                <td><input type="text"  id="name" onfocus="OnFocusArrived(this.id);" onblur="BeforeFocusGone(this.id)"></td>
+                <td><input type="text"  id="surname" onfocus="OnFocusArrived(this.id);" onblur="BeforeFocusGone(this.id)"></td>
+                <td>
+                    <select id="gender" onchange="OnGenderSelected(this.value);">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="submit" value="Search" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function OnFocusArrived(control)
+        {
+            document.getElementById(control).className="active-text-box";
+        }
+        function BeforeFocusGone(control)
+        {
+            document.getElementById(control).className = "";
+        }
+        function OnGenderSelected(SelectedGender)
+        {
+            if(SelectedGender === '1')
+                alert('Male Selected...');
+            else 
+                alert('Female Selected....');
+        }
+    </script>
+</body>
+</html>
