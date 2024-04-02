@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Creating Object in javascript (1st method)</h1>
+    <hr />
+    
+    <script>
+        var MyMath = {
+            num1: 0,
+            num2: 0,
+            getAddition: function () {
+                let temp = this.num1 + this.num2;
+                return temp;
+            },
+            getSubtraction: function () {
+                let temp = this.num1 - this.num2;
+                return temp;
+            },
+            getMultiplication: function () {
+                let temp = this.num1 * this.num2;
+                return temp;
+            },
+            getDivision: function () {
+                let temp = this.num1 / this.num2;
+                return temp;
+            }
+        }
+        //change num1 and num2
+        MyMath.num1 = 100;
+        MyMath.num2 = 3;
+
+        //access num1 and num2
+        console.log(MyMath.num1,MyMath.num2);
+
+    </script>
+</body>
+
+</html>
