@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>2nd method of creating Object</h1>
+    <table border="1" width="100%">
+        <tr>
+            <td>
+                <form onsubmit="return AddProduct();">
+                    <table border="1" width="100%" cellpadding="10">
+                        <tr>
+                            <td>
+                                <input type="text" id="name" required placeholder="Product Name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="number" id="price" required placeholder="Price" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="number" id="quantity" required placeholder="Quantity" />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Add Product" />
+
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td width="80%" valign="top">
+                <table border="1" align="center" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="5%">Sr No</th>
+                            <th width="35%">Name</th>
+                            <th width="20%">Price</th>
+                            <th width="20%">quantity</th>
+                            <th>total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="output">
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var srno=1;
+        //create object using 2nd method 
+        var Product = new Object({
+            name: null,
+            price: 0,
+            quantity: 0,
+            total: 0,
+            add: function () {
+                let content = `<tr>
+                <td>${srno++}</td>
+                <td>${this.name}</td>
+                <td align='right'>${this.price}</td>
+                <td align='right'>${this.quantity}</td>
+                <td align='right'>${this.total}</td>
+            </tr>`;
+                document.getElementById('output').innerHTML += content;
+            }
+        });
+
+        //create object variable 
+        function AddProduct() {
+            var p1 = Product;
+            //change property variable
+            p1.name = document.getElementById('name').value;
+            p1.price = document.getElementById('price').value;
+            p1.quantity = document.getElementById('quantity').value;
+            document.getElementById('name').value = "";
+            document.getElementById('price').value = "";
+            document.getElementById('quantity').value = "";
+            p1.total = p1.price * p1.quantity;
+            p1.add();
+
+           
+
+            return false;
+        }
+
+
+    </script>
+</body>
+
+</html>
