@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First example of array</h1>
+    <hr/>
+    <b>use console</b>
+    <script>
+        //create empty array
+        var fruits = [];
+        console.log("empty array",fruits);
+        //array add items
+        fruits.push("watermelon");
+        fruits.push("pinapple");
+        fruits.push("mango");
+        fruits.push("lemon");
+
+        fruits.unshift("apple");
+        fruits.unshift("banana");
+        console.log("now array has",fruits);
+
+        //remove items
+        fruits.pop(); //remove value added at last (lemon)
+        console.log("after removing array has",fruits);
+
+        fruits.splice(0,2); //splice method remove 2 items from 0th position
+        console.log("after removing item @ begining array has",fruits);
+
+        //sorting
+        fruits.sort();
+        console.log("after sorting array has",fruits);
+
+        //findout position of mango
+        var position = fruits.indexOf("pinapple"); 
+        console.log(position);
+
+        position = fruits.indexOf("kiwi");
+        console.log(position);
+
+        //value change
+        fruits[0] = "Kachha Mango";
+        console.log("array after update operation ",fruits);
+    </script>
+</body>
+</html>

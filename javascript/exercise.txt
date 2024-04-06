@@ -26,3 +26,7 @@ input : 11:00 output 11:00 AM
 
 9) write javascript code to display multiplication table between given range. for guidance about how to display it refer below url
 https://www.cuemath.com/multiplication-tables/tables-1-to-10/
+
+10) create an array that has 30 vegitables name. use map function to count vegitables names that start with vowels
+
+11) create an array that 20 countries name. count coutries whose name end with land.
