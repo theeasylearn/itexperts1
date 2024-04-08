@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* universal selector */
+        *
+        {
+            margin: 0px;
+            padding:0px;
+        }
+        /* type selector */
+        body 
+        {
+
+        }
+        ul 
+        {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            background-color: aliceblue;
+            padding: 20px 0px;
+        }
+        /* pseudo class */
+        a:link 
+        {
+            font-size: x-large;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            padding:10px;
+        }
+        a:visited 
+        {
+            color:darkgray;
+        }
+        a:hover 
+        {
+            background-color: blue;
+            color:white;
+            border-radius: 5px;
+        }
+        a:active 
+        {
+            background-color: red;
+            color:yellow;
+        }
+        /* ID selector */
+        #stories 
+        {
+            padding:10px 20px;
+            font-size: 18px;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            line-height: 150%;
+        }
+        #stories>p:first-child
+        {
+            color:blue;
+            font-size: 20px;
+            text-align: justify;
+            text-indent: 100px;
+        }
+        #stories>p:nth-child(2)
+        {
+            color:brown;
+            text-align: right;
+        }
+        #stories>p:last-child
+        {
+            color:red;
+            font-size: 22px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="http://www.apple.com">Apple</a>
+        </li>
+        <li>
+            <a href="http://www.amazon.in">Amazon</a>
+        </li>
+        <li>
+            <a href="http://www.openai.com">Open AI</a>
+        </li>
+        <li>
+            <a href="http://www.ibm.com">IBM</a>
+        </li>
+        <li>
+            <a href="http://www.oracle.com">Oracle</a>
+        </li>
+        
+    </ul>
+    <div id="stories">
+        <p>
+            <b>second story</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error nostrum asperiores debitis voluptas vero voluptatibus blanditiis architecto magnam natus consequatur veniam eveniet nemo amet earum quidem nihil, quibusdam praesentium quaerat molestiae incidunt laudantium obcaecati sapiente delectus? Temporibus quos culpa deserunt similique mollitia accusantium distinctio quam id quidem suscipit asperiores rerum hic vitae iusto dicta libero illo quisquam dolorem, optio sunt tempore? Incidunt, eligendi quaerat possimus placeat quia dolorem in reiciendis corrupti dolore soluta doloremque expedita laudantium! Mollitia est odio repellat asperiores sed, excepturi molestias nam saepe quasi placeat consectetur accusantium nulla ad possimus nobis praesentium nesciunt temporibus cumque molestiae?
+        </p>
+        <p>
+            <b>first story</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error nostrum asperiores debitis voluptas vero voluptatibus blanditiis architecto magnam natus consequatur veniam eveniet nemo amet earum quidem nihil, quibusdam praesentium quaerat molestiae incidunt laudantium obcaecati sapiente delectus? Temporibus quos culpa deserunt similique mollitia accusantium distinctio quam id quidem suscipit asperiores rerum hic vitae iusto dicta libero illo quisquam dolorem, optio sunt tempore? Incidunt, eligendi quaerat possimus placeat quia dolorem in reiciendis corrupti dolore soluta doloremque expedita laudantium! Mollitia est odio repellat asperiores sed, excepturi molestias nam saepe quasi placeat consectetur accusantium nulla ad possimus nobis praesentium nesciunt temporibus cumque molestiae?
+        </p>
+       
+        <p>
+            <b>third story</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor error nostrum asperiores debitis voluptas vero voluptatibus blanditiis architecto magnam natus consequatur veniam eveniet nemo amet earum quidem nihil, quibusdam praesentium quaerat molestiae incidunt laudantium obcaecati sapiente delectus? Temporibus quos culpa deserunt similique mollitia accusantium distinctio quam id quidem suscipit asperiores rerum hic vitae iusto dicta libero illo quisquam dolorem, optio sunt tempore? Incidunt, eligendi quaerat possimus placeat quia dolorem in reiciendis corrupti dolore soluta doloremque expedita laudantium! Mollitia est odio repellat asperiores sed, excepturi molestias nam saepe quasi placeat consectetur accusantium nulla ad possimus nobis praesentium nesciunt temporibus cumque molestiae?
+        </p>
+    </div>
+</body>
+</html>

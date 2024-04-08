@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating Object in javascript (1st method)</h1>
+    <hr/>
+    <h2 id="mytime"></h2>
+    <script>
+        //create object
+        var time = {
+            //property vaiable
+            hour: 4,
+            minute:54,
+            second:20,
+            getTime:function()
+            {
+                //local variable means variable which is available to use in function where it is declared.
+                let currenttime = this.hour + ":" + this.minute + ":" + this.second;
+                return currenttime;
+            }
+        };
+        var currenttime  = time.getTime();
+        console.log(currenttime);
+        document.getElementById('mytime').innerHTML = currenttime;
+    </script>
+</body>
+</html>

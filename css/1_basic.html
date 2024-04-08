@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+        <style>
+            /* internal stylesheet */
+        
+            /* universal selector */
+            * {
+                margin: 0px;
+            }
+        
+            /* type selector */
+            body {
+                background-color: #fdebd0; /* Cream */
+            }
+        
+            h1 {
+                color: whitesmoke; /* Red */
+                text-decoration: underline;
+            }
+        
+            span {
+                color: yellow; /* Orange */
+                text-transform: uppercase;
+                font-weight: bold;
+                font-style: italic;
+            }
+        
+            /* class selector */
+            .logo {
+                height: 96px;
+                width: 96px;
+            }
+        
+            .site-heading {
+                z-index: 1;
+                display: flex;
+                background-color: #d35400; /* Pumpkin */
+                justify-content: space-between;
+                /* horizontal alignment */
+                align-items: center;
+                /* vertical alignment */
+                position: sticky;
+                left: 0px;
+                top: 0px;
+                box-shadow: 5px 5px 5px #bdc3c7; /* Silver */
+                font-family: "Merriweather", serif;
+            }
+        
+            .menu {
+                display: flex;
+                gap: 10px;
+                list-style-type: none;
+            }
+        
+            .menu_link {
+                color: #d35400; /* Pumpkin */
+                padding: 10px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: large;
+                background-color: #fdebd0; /* Orange */
+                border-radius: 10px;
+            }
+        
+            section {
+                margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-around;
+            }
+        
+            article {
+                box-sizing: border-box;
+                width: calc(25% - 20px);
+                border: 1px solid #d35400; /* Pumpkin */
+                text-align: center;
+                background-color: #fef5e7; /* Cream */
+            }
+        
+            /* if header is direct child of article */
+            article>a>header {
+                background-color: #d35400; /* Pumpkin */
+                padding: 10px;
+                color: #fff; /* White */
+                font-size: x-large;
+                text-align: center;
+                text-transform: uppercase;
+                height: 50px;
+            }
+        
+            article>a>img {
+                border-radius: 100%;
+                margin-top: 10px;
+                filter: grayscale(100%);
+                transition: filter 0.5s ease; /* Transition effect over 0.5 seconds */
+            }
+            article>a>img:hover 
+            {
+                filter: grayscale(0%);
+            }
+            article>a {
+                text-decoration: none !important;
+                color: #d35400; /* Pumpkin */
+            }
+        
+            article>a>p {
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: large;
+                font-family: "Open Sans", sans-serif;
+                color: #333; /* Dark gray */
+            }
+        
+            footer {
+                margin-top: 20px;
+                background-color: #d35400; /* Pumpkin */
+                color: #fff; /* White */
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-family: "Open Sans", sans-serif;
+            }
+        </style>
+        
+</head>
+
+<body>
+    <header class="site-heading">
+        <img class="logo" src="images/logo.png" alt="">
+        <h1>Spice<span>Saga</span></h1>
+        <ul class="menu">
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+            <li><a class="menu_link" href="#">Sample Link</a></li>
+        </ul>
+    </header>
+    <section>
+        <article>
+            <a href="2_recipe_detail.html">
+                <header>Palak Paneer</header>
+                <img src="https://picsum.photos/200" alt="Palak Paneer">
+                <p>Palak paneer is a popular North Indian curry made with spinach and paneer (cottage cheese) in a
+                    flavorful tomato-based sauce.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Aloo Gobi</header>
+                <img src="https://picsum.photos/200" alt="Aloo Gobi">
+                <p>Aloo Gobi is a dry curry made with potatoes (aloo) and cauliflower (gobi) seasoned with spices, a
+                    simple and tasty dish.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Baingan Bharta</header>
+                <img src="https://picsum.photos/200" alt="Baingan Bharta">
+                <p>Baingan Bharta is a smoky-flavored eggplant dish where roasted and mashed eggplant is cooked with
+                    spices and tomatoes.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Gobi Manchurian</header>
+                <img src="https://picsum.photos/200" alt="Gobi Manchurian">
+                <p>Gobi Manchurian is a popular Indo-Chinese dish featuring crispy fried cauliflower florets tossed in a
+                    tangy and spicy sauce.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Mixed Vegetable Curry</header>
+                <img src="https://picsum.photos/200" alt="Mixed Vegetable Curry">
+                <p>A flavorful curry made with a mix of colorful vegetables in a spiced tomato-based gravy, perfect with
+                    rice or bread.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Bhindi Masala</header>
+                <img src="https://picsum.photos/200" alt="Bhindi Masala">
+                <p>Bhindi Masala is a dry curry made with okra (bhindi) sautéed with spices, onions, and tomatoes, a
+                    delicious side dish.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Vegetable Biryani</header>
+                <img src="https://picsum.photos/200" alt="Vegetable Biryani">
+                <p>Aromatic and flavorful vegetable biryani made with basmati rice, mixed vegetables, and a blend of
+                    spices.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Methi Thepla</header>
+                <img src="https://picsum.photos/200" alt="Methi Thepla">
+                <p>Methi Thepla is a popular Gujarati flatbread made with whole wheat flour, fenugreek leaves, and
+                    spices.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Chana Masala</header>
+                <img src="https://picsum.photos/200" alt="Chana Masala">
+                <p>Chana Masala is a flavorful and protein-packed curry made with chickpeas, tomatoes, and various
+                    spices.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Spinach Mushroom Curry</header>
+                <img src="https://picsum.photos/200" alt="Spinach Mushroom Curry">
+                <p>Delicious curry made with fresh spinach, mushrooms, and a blend of aromatic spices.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Kadai Vegetable</header>
+                <img src="https://picsum.photos/200" alt="Kadai Vegetable">
+                <p>Kadai Vegetable is a flavorful stir-fried dish made with a variety of vegetables, spices, and bell
+                    peppers.</p>
+            </a>
+        </article>
+
+        <article>
+            <a href="#">
+                <header>Cabbage Thoran</header>
+                <img src="https://picsum.photos/200" alt="Cabbage Thoran">
+                <p>Cabbage Thoran is a South Indian dish made with shredded cabbage, coconut, and mild spices.</p>
+            </a>
+        </article>
+    </section>
+
+    <footer>
+        <p>Developed By :- Team ITExperts, Bhavnagar</p>
+        <p>Mobile no :- 1234567890, Email : info@itexperts.com</p>
+    </footer>
+</body>
+
+</html>

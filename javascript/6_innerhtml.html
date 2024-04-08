@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>innerHTML property</h1>
+    <table width="50%" align="center" border="1" />
+        <tr>
+            <td align="center">
+                <input type="button" value="Get Date" onclick="getDate();" />
+            </td>
+            <td align="center">
+                <input type="button" value="Get Time" onclick="getTime();" />
+            </td>
+        </tr>
+        <tr>
+            <td id="mydate"></td>
+            <td id="mytime"></td>
+        </tr>
+    </table>
+    <script>
+        //create user defined function (event handler)
+        function getDate()
+        {
+            console.log("getDate button clicked....");
+            //create date class object
+            let today = new Date();
+            let message = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear();
+            console.log(message);
+            document.getElementById('mydate').innerHTML = message;
+        }
+        function getTime()
+        {
+            console.log("getTime button clicked....");
+            let current = new Date();
+            let message = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+            console.log(message);
+            document.getElementById('mytime').innerHTML = message;
+        }
+    </script>
+</body>
+</html>

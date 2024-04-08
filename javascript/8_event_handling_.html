@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red 
+        {
+            background-color: red;
+            color:yellow;
+            font-size: 2rem;
+            box-shadow: 5px 5px 5px grey;
+        }
+        .green 
+        {
+            background-color: green;
+            color:lime;
+            font-size: 3rem;
+            box-shadow: 5px 5px 5px grey;
+        }
+        #mydiv 
+        {
+            height:300px;
+            width:300px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv" onmouseover="ApplycssClass();" onmouseout="ChangeCssClass();">
+        Event Demo
+    </div>
+    <script>
+            var mydiv = document.getElementById('mydiv');
+            function ApplycssClass()
+            {
+                //alert('ApplycssClass function called....');
+                mydiv.className = "red";
+            }
+            function ChangeCssClass() 
+            {
+                mydiv.className = "green";
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+1) write a javascript code to accept amount, rate, year from user. calculate and display simple interest using document.write method.
+
+
+2) write a javascript code to accept hours and minutes from user in two different variable. calculate and display total minutes using alert. 
+
+3) write a javascript code to accept temprature from user in ceilcius format. calculate & display it in farenheit format. 
+
+4) write a javascript code to accept products production cost and sales cost. calculate and display profit/loss with message using document.write method. also calculate & display profit or loss rate. 
+
+5) write a javascript code two accept 2 digit number from user. for example 58. display it in words like five eight. 
+
+amount = 58
+last_digit = 58 % 10 
+amount = amount / 10; // 5
+
+
+6 7 and 8 number exercise has to be developed using coniditional operator
+--------------------------------------------------------------------------
+6) write javascript code to accept time from user in 24 hours format and then display time in 12 hours format with AM / PM suffix 
+input : 18:00 output 06:00 PM
+input : 11:00 output 11:00 AM
+
+7) write javascript code to accept positive integer from user. if given number is odd then calculate squre else calculate qube and display it 
+
+8) write javascript code to accept year. if year is leap year display message this year has 366 days. else display this year has 365 day.
+
+9) write javascript code to display multiplication table between given range. for guidance about how to display it refer below url
+https://www.cuemath.com/multiplication-tables/tables-1-to-10/
+
+10) create an array that has 30 vegitables name. use map function to count vegitables names that start with vowels
+
+11) create an array that 20 countries name. count coutries whose name end with land.

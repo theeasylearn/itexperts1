@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Creating Object in javascript (1st method)</h1>
+    <hr />
+    <form action="" onsubmit="return doCalculation();">
+        <table width="100%" cellpadding="10" border="1">
+            <tr>
+                <td>
+                    <input type="number" id="number1" required />
+                </td>
+                <td>
+                    <input type="number" id="number2" required />
+                </td>
+                <td>
+                    <input type="submit" value="Get Result" />
+                </td>
+            </tr>
+        </table>
+    </form>
+        <table border="1" align="center" width="50%">
+            <tr>
+                <td width="50%">Addition</td>
+            <td id="add"></td>
+        </tr>
+        <tr>
+            <td>Subtraction</td>
+            <td id="sub"></td>
+        </tr>
+        <tr>
+            <td>Multiplication</td>
+            <td id="mul"></td>
+        </tr>
+        <tr>
+            <td>Division</td>
+            <td id="div"></td>
+        </tr>
+
+    </table>
+    <script>
+        function doCalculation() {
+            var MyMath = {
+                //propery variables
+                num1: 0,
+                num2: 0,
+                //methods / behaviours
+                getAddition: function () {
+                    let temp = this.num1 + this.num2;
+                    return temp;
+                },
+                getSubtraction: function () {
+                    let temp = this.num1 - this.num2;
+                    return temp;
+                },
+                getMultiplication: function () {
+                    let temp = this.num1 * this.num2;
+                    return temp;
+                },
+                getDivision: function () {
+                    let temp = this.num1 / this.num2;
+                    return temp;
+                }
+            }
+            //change num1 and num2
+            MyMath.num1 = parseInt(document.getElementById('number1').value);
+            MyMath.num2 = parseInt(document.getElementById('number2').value);
+            //access num1 and num2
+            console.log(MyMath.num1, MyMath.num2);
+            let add = MyMath.getAddition();
+            let sub = MyMath.getSubtraction();
+            let mul = MyMath.getMultiplication();
+            let div = MyMath.getDivision().toFixed(2);
+
+            document.getElementById('add').innerHTML = add;
+            document.getElementById('sub').innerHTML = sub;
+            document.getElementById('mul').innerHTML = mul;
+            document.getElementById('div').innerHTML = div;
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

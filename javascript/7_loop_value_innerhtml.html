@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <td width="15%">
+                <form action="" method="post" onsubmit="return GenerateTable();">
+                    <table border="1" width="100%" cellpadding="10">
+                        <tr>
+                            <td align="center">
+                                <h4>Table Generator</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input placeholder="rows" type="number" name="rowcount" id="rowcount" required />
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <input placeholder="column" type="number" name="columncount" id="columncount"
+                                    required />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="loopchoice" id="loopchoice">
+                                    <option value="">Select loop</option>
+                                    <option value="1">While loop</option>
+                                    <option value="2">For loop</option>
+                                    <!-- exit control loop -->
+                                    <option value="3">Do while loop</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Generate Table" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td width="85%" valign="top" id="mytable">
+
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        //user defined function 
+        function GenerateTable() {
+            var rowcount = parseInt(document.getElementById('rowcount').value);
+            var colcount = parseInt(document.getElementById('columncount').value);
+            var loopchoice = parseInt(document.getElementById('loopchoice').value);
+            var mytable = document.getElementById('mytable');
+            var content = ` <table border="1" width="100%">`;
+            if (loopchoice === 1) {
+                var i = 1;
+                //entry control loop
+                while (i <= rowcount) //outer loop
+                {
+                    content += `<tr>`;
+                    var j = 1;
+                    while (j <= colcount) // inner loop
+                    {
+                        content += `<td>INDIA</td>`;
+                        j = j + 1;
+                    }
+                    content += `</tr>`;
+                    i = i + 1;
+                }
+                content += `</table>`;
+                mytable.innerHTML = content;
+            }
+            else if (loopchoice === 3) {
+                var i = 1;
+                //entry control loop
+                do {
+                    content += `<tr>`;
+                    var j = 1;
+                    do {
+                        content += `<td>BHARAT</td>`;
+                        j = j + 1;
+                    } while (j <= colcount); // inner loop
+                    content += `</tr>`;
+                    i = i + 1;
+                } while (i <= rowcount); //outer loop
+                content += `</table>`;
+                mytable.innerHTML = content;
+            }
+            else if (loopchoice === 2) {
+                for (let i = 1; i <= rowcount; i = i + 1) {
+                    content += `<tr>`;
+                    for(let j=1;j<=colcount;j=j+1)    
+                    {
+                        content += `<td>bharat</td>`;
+                    }
+                    content += `</tr>`;
+                }
+                mytable.innerHTML = content;
+            }
+            return false; //required to prevent reloading page
+        }
+    </script>
+</body>
+
+</html>

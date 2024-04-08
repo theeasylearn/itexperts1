@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>Working with inputs</h1>
+    <form action="success.html" method="post" enctype="multipart/form-data" autocomplete="on">
+        <table border="1" width="50%" align="center" cellpadding="10">
+            <tr>
+                <td>
+                    Enter BirthDate & time
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input autofocus  type="datetime-local" name="birthdate" id="birthdate" required />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="email" name="email" id="email" required placeholder="Enter email address" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="tel" name="mobile" id="mobile" required placeholder="Enter mobile" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="url" name="website" id="website" placeholder="Enter your website name" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="color" name="favourite_color" id="favourite_color" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input min="10" max="100" type="number" name="weight" id="weight" required placeholder="Enter weight in kg" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="number" name="height" id="height" step="0.1" placeholder="Enter height in meters" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input max="2024-02-28" type="date" name="anndate" id="anndate" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" name="pancard" id="pancard"
+                    pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" autocomplete="off" placeholder="Enter pan card no" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" name="aadhar_card" id="aadhar_card"
+                    pattern="[0-9]{12}" autocomplete="off"  placeholder="Enter aadhar card no" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" name="enrollment_no" id="enrollment_no" required
+                    pattern="[A-Za-z]{3}-[0-9]{2}-[0-9]{4}" placeholder="Enter enrollment no (xxx-99-9999)" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="file" name="photo" id="photo" accept="image/*"
+                    multiple />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="file" name="ration_card" id="ration_card" 
+                    accept="application/pdf"  />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="submit input" name="submit" id="submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
