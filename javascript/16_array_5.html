@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array of objects</h1>
+    <hr>
+    <table border="1" align="center" cellpadding="10" width='80%'>
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Bus type</th>
+                <th>Depature time</th>
+            </tr>
+        </thead>
+        <tbody id="output">
+
+        </tbody>
+    </table>
+    <script>
+        // array of objects
+        var routes = [
+            { from: 'bhavnagar', to: 'surat', busType: 'AC', departureTime: '08:00 AM' },
+            { from: 'rajkot', to: 'baroda', busType: 'non AC', departureTime: '09:30 AM' },
+            { from: 'ahmedabad', to: 'jamnagar', busType: 'AC', departureTime: '11:15 AM' },
+            { from: 'baroda', to: 'bhavnagar', busType: 'non AC', departureTime: '01:00 PM' },
+            { from: 'surat', to: 'rajkot', busType: 'AC', departureTime: '02:45 PM' },
+            { from: 'jamnagar', to: 'ahmedabad', busType: 'non AC', departureTime: '04:30 PM' },
+            { from: 'bhavnagar', to: 'rajkot', busType: 'AC', departureTime: '06:15 PM' },
+            { from: 'surat', to: 'baroda', busType: 'non AC', departureTime: '07:45 PM' },
+            { from: 'rajkot', to: 'jamnagar', busType: 'AC', departureTime: '09:30 PM' },
+            { from: 'baroda', to: 'ahmedabad', busType: 'non AC', departureTime: '11:15 PM' },
+            { from: 'ahmedabad', to: 'bhavnagar', busType: 'AC', departureTime: '01:00 AM' },
+            { from: 'jamnagar', to: 'rajkot', busType: 'non AC', departureTime: '02:45 AM' },
+            { from: 'baroda', to: 'surat', busType: 'AC', departureTime: '04:30 AM' },
+            { from: 'bhavnagar', to: 'jamnagar', busType: 'non AC', departureTime: '06:15 AM' },
+            { from: 'rajkot', to: 'ahmedabad', busType: 'AC', departureTime: '07:45 AM' },
+            { from: 'ahmedabad', to: 'baroda', busType: 'non AC', departureTime: '09:30 AM' },
+            { from: 'surat', to: 'bhavnagar', busType: 'AC', departureTime: '11:15 AM' },
+            { from: 'jamnagar', to: 'rajkot', busType: 'non AC', departureTime: '01:00 PM' },
+            { from: 'baroda', to: 'surat', busType: 'AC', departureTime: '02:45 PM' },
+            { from: 'rajkot', to: 'bhavnagar', busType: 'non AC', departureTime: '04:30 PM' },
+            { from: 'ahmedabad', to: 'surat', busType: 'AC', departureTime: '06:15 PM' },
+            { from: 'baroda', to: 'rajkot', busType: 'non AC', departureTime: '07:45 PM' },
+            { from: 'bhavnagar', to: 'baroda', busType: 'AC', departureTime: '09:30 PM' },
+            { from: 'jamnagar', to: 'bhavnagar', busType: 'non AC', departureTime: '11:15 PM' },
+            { from: 'surat', to: 'ahmedabad', busType: 'AC', departureTime: '01:00 AM' },
+            { from: 'rajkot', to: 'baroda', busType: 'non AC', departureTime: '02:45 AM' },
+            { from: 'bhavnagar', to: 'baroda', busType: 'AC', departureTime: '04:30 AM' },
+            { from: 'jamnagar', to: 'rajkot', busType: 'non AC', departureTime: '06:15 AM' },
+            { from: 'surat', to: 'bhavnagar', busType: 'AC', departureTime: '07:45 AM' },
+            { from: 'baroda', to: 'rajkot', busType: 'non AC', departureTime: '09:30 AM' },
+            { from: 'ahmedabad', to: 'surat', busType: 'AC', departureTime: '11:15 AM' },
+            { from: 'rajkot', to: 'bhavnagar', busType: 'non AC', departureTime: '01:00 PM' },
+            { from: 'baroda', to: 'jamnagar', busType: 'AC', departureTime: '02:45 PM' },
+            { from: 'bhavnagar', to: 'surat', busType: 'non AC', departureTime: '04:30 PM' },
+            { from: 'surat', to: 'rajkot', busType: 'AC', departureTime: '06:15 PM' },
+        ];
+        var output = document.getElementById('output');
+        routes.map(function (item) {
+            console.log(item);
+            output.innerHTML += `<tr>`;
+            let temp = '';
+            for(let key in item)
+            {
+                temp += `<td>${item[key]}</td>`;
+            }
+            output.innerHTML= output.innerHTML + temp + `</tr>`;
+        });
+
+    </script>
+</body>
+
+</html>
