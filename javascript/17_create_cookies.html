@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Form</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return saveCookie();">
+        <table>
+            <tr>
+                <th colspan="2" align="center"><h3>Create cookies</h3></th>
+            </tr>
+            <tr>
+                <td><label for="cookieName">Cookies Name:</label></td>
+                <td><input type="text" id="cookieName" name="cookieName" required></td>
+            </tr>
+            <tr>
+                <td><label for="cookieValue">Cookies Value:</label></td>
+                <td><input type="text" id="cookieValue" name="cookieValue" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Save cookie" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <!-- external javascript -->
+    <script src="cookies.js"></script>
+    <script>
+        function saveCookie()
+        {
+            let cookie_name = document.getElementById('cookieName').value;
+            let cookie_value = document.getElementById('cookieValue').value;
+            console.log(cookie_name,cookie_value);
+            setCookie(cookie_name,cookie_value);
+            document.getElementById('cookieName').value = '';
+            document.getElementById('cookieValue').value = '';
+            alert('cookies has been created.....'); 
+            return false;
+        }
+    </script>
+</body>
+</html>
