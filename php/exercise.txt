@@ -1,0 +1,6 @@
+1) write a php program to accept product's sales price, production price from user. and calculate profit/loss amount and profit/loss rate. 
+
+2) write a program to calculate to emi from user given input. refer example
+https://emicalculator.net/
+
+3) develop BMI calcutor. refer example https://www.calculator.net
