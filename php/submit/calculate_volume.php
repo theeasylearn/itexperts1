@@ -1,7 +1,7 @@
 <?php
 //check whether variables exists or not
 if (isset($_GET['submit'],$_GET['length'],$_GET['width'],$_GET['depth']) == false) {
-    // echo "input is missing";
+    // echo "input is missing"; 
     header('location:../3_input_volume_calculator.php');
 } else {
     //create variables store frontend page input
