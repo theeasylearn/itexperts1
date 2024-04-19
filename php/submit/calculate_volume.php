@@ -11,7 +11,6 @@ if (isset($_GET['submit'],$_GET['length'],$_GET['width'],$_GET['depth']) == fals
 
     echo "$length $width $depth";
 
-    //process
     $volume = $length * $width * $depth;
     echo "<h3>Volume is = $volume </h3>";
 }

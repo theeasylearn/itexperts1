@@ -68,7 +68,6 @@
   <form action="submit/calculate_volume.php" method="get">
     <label for="length">Length:</label>
     <input type="number" id="length" name="length" min="0" step="any" required>
-    
     <label for="width">Width:</label>
     <input type="number" id="width" name="width" min="0" step="any" required>
     
