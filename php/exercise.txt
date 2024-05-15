@@ -4,3 +4,6 @@
 https://emicalculator.net/
 
 3) develop BMI calcutor. refer example https://www.calculator.net
+
+4) create class to store student details to store below details
+        name,surname,dob,gender,weight,email,mobile
