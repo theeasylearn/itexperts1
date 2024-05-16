@@ -7,3 +7,4 @@ https://emicalculator.net/
 
 4) create class to store student details to store below details
         name,surname,dob,gender,weight,email,mobile
+
