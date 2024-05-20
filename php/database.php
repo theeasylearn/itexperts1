@@ -37,5 +37,5 @@
         {
             echo "<br/> can not change $name as it is private";
         }
-    }
+    } 
 ?>
