@@ -1,0 +1,30 @@
+how to create table 
+-------------------------------
+create table person (
+    id int primary key auto_increment,
+    fullname varchar(64) not null,
+    mobile varchar(16) unique not null,
+    email varchar(128) unique, 
+    gender char(1),
+    photo varchar(256),
+    dob date not null,
+    weight float(5,2)
+)
+
+how to insert a new row into table 
+----------------------------------------
+syntax
+-------
+1st method
+insert into tablename  values(value1,value2,value3,value4,value5,value6,value7,value8)
+
+insert into subject values (0,'HTML','hyper text markup language','html.jpg','2024-05-28','ABCD1001')
+
+insert into subject values (0,'CSS','cascading style sheet','css.jpg','2024-05-28','ABCD1002')
+
+syntax
+-------
+2nd method
+insert into tablename (field1,field2,field3,field4,field5)  values(value1,value2,value3,value4,value5)
+
+insert into subject (name,description,photo,code) values ('javascript','client side scripting language','javascript.jpg','xyza1003');
