@@ -28,3 +28,107 @@ syntax
 insert into tablename (field1,field2,field3,field4,field5)  values(value1,value2,value3,value4,value5)
 
 insert into subject (name,description,photo,code) values ('javascript','client side scripting language','javascript.jpg','xyza1003');
+
+how to update exists rows into table
+---------------------------------------
+syntax
+update <tablename> set fieldname=value,fieldname2=value2 [where condition]
+
+question
+update addressline1,addressline2,city,state,country of customernumber 103
+
+sql command
+update customers set addressline1='ghogha circle',addressline2='near nobal house', city='bhavnagar',state='gujarat',country='india' where customernumber=103
+
+update credilimit of all customers new credilimit should be 100000
+update customers set creditlimit=100000
+
+update credilimit by 10 % of those customers who are from usa country 
+update customers set credilimit=creditlimit*1.10 where country='usa'
+
+how to delete rows from table?
+-----------------------------------------------
+syntax
+delete from <tablename> [where condition]
+
+delete details of customers who are from australia
+delete from customers where country='australia'
+
+delete customers whose customernumber is between 110 and 120
+delete from customers where customernumber>=110 and customernumber<=120
+
+delete from customers
+
+delete all rows from table and reset primary key 
+truncate table customers
+
+---------------------------------------------------------------
+
+how to fetch data from tables?
+---------------------------------------------------------------
+syntax
+select aggregate function|fieldlist|* from <tablename> [where <condition>] [group by fieldname] [having <condition>] [order by fieldname] [limit start value|stop value]
+
+fetch all customers detail 
+select * from customers
+
+fetch only customernumber and his name of all customers
+select customernumber,customername from customers
+
+fetch only customernumber,name,creditlimit,city,postalCode,state & country of all customers
+select customernumber,customername,creditlimit,city,postalCode,state,country from customers
+
+fetch 1st 50 customername of customers
+select customername from customers limit 0,50
+
+
+fetch next 50 customername of customers
+select customername from customers limit 50,50
+
+fetch 50 customernumber,customername from 100 position onwards
+select customernumber,customername from customers limit 100,50
+
+fetch customernumber and customername and display them name wise 
+select customernumber,customername from customers order by customername
+
+fetch customername,city,state and country of 1st 100 customers and display them country wise 
+
+select customername,city,state,country from customers  order by country limit 0,100
+
+fetch customername,city,state and country of 1st 100 customers and display them country wise then state wise and city wise 
+
+select customername,city,state,country from customers  order by country,state,city limit 0,100
+
+fetch & display customername in reverse order / desending order 
+select customername from customers  order by customername desc
+
+how to filter records as per condition?
+
+fetch only customers detail who are from usa 
+select * from customers where country='usa'
+
+fetch only customers detail who are from usa and display them name wise in ascnding order 
+select * from customers where country='usa' order by customerName 
+
+fetch only 1st 20 customers detail who are from usa and display them name wise in ascnding order 
+select * from customers where country='usa' order by customerName asc limit 0,20
+
+aggregate functions
+----------------------------------------------------------------------------
+aggregate functions works upon numeric fields and return only single value like sum, min, max, average, country etc. 
+
+fetch total payment received so far 
+select sum(amount) from payments
+
+
+fetch average payment amount
+select AVG(amount) from payments
+
+fetch minimum, maximum payment amount 
+select min(amount) as minimum, max(amount) as maximum from payments 
+
+count no of products 
+select count(*) from products
+
+fetch total payment amount of customernumber 112
+select sum(amount) from payments where customernumber=112
