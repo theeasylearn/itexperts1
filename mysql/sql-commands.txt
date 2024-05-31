@@ -132,3 +132,42 @@ select count(*) from products
 
 fetch total payment amount of customernumber 112
 select sum(amount) from payments where customernumber=112
+
+------------------------------------------------------------------
+working with dates 
+findout total payment amount received in calendar year 2004
+select sum(amount) from payments where paymentDate>='2004-01-01' and paymentDate<='2004-12-01'
+
+
+findout total payment amount received in received in financial year 2003
+select sum(amount) from payments where paymentDate>='2003-04-01' and paymentDate<='2004-03-31'
+
+findout total customers from france country 
+select count(*) from customers where country='france'
+
+how to use group by clause 
+----------------------------------------------------------
+findout no of payments made by each customers 
+select count(*),customernumber from payments group by customernumber
+
+findout total payments made by each customers 
+select customernumber,sum(amount) from payments group by customernumber
+
+findout total no of orders placed by each customers 
+select customernumber,count(*) from orders group by customernumber
+
+findout count of orders received in each calnedar year 
+select left(orderdate,4) as year,count(*) as no_of_orders from orders group by left(orderdate,4)
+
+findout no of orders received in each quarter 
+SELECT 
+    YEAR(orderDate) AS year,
+    QUARTER(orderDate) AS quarter,
+    COUNT(orderNumber) AS order_count
+FROM 
+    orders
+GROUP BY 
+    YEAR(orderDate), QUARTER(orderDate)
+ORDER BY 
+    year, quarter;
+    
