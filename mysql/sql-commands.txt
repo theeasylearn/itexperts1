@@ -171,3 +171,57 @@ GROUP BY
 ORDER BY 
     year, quarter;
     
+having clause 
+---------------------------
+findout total no of orders placed by those customers who has place less then 4 orders
+select customernumber,count(*) from orders group by customernumber  having count(*)<4 order by count(*)
+
+findout all customernumber and his total payment of those customers  who made <60000 total payment 
+
+select customernumber, sum(amount) as total_payment from payments group by customernumber having sum(amount)<60000
+
+findout country wise customers count of those country where there are more then 10 customers 
+select country,count(*) from customers group by country having count(*)>10
+
+fetch unique country names 
+--------------------------------
+select distinct country from customers order by country
+
+fetch customernumber who has made at least 1 payment 
+select distinct customernumber from payments
+----------------------------------------------------
+what is join 
+join is basically select query that fetch data from more then one table 
+
+why we need join?
+because single table do provide all required information. for example in our database payment is information is stored into payments while customer detail is stored into customers table 
+
+types of join 
+----------------------------
+inner/equi join 
+    inner or equi join will fetch only matching data from both table. 
+left join 
+right join 
+full join 
+
+fetch customernumber,customerName,paymentdate,payment amount and display them customernumber wise. 
+
+select customernumber,paymentdate,amount from payments order by customernumber
+select customerName from customers 
+
+now merge query 
+select p.customernumber,customerName,paymentdate,amount from payments p, customers c where p.customernumber=c.customernumber order by p.customernumber
+
+
+fetch customernumber,orderno,orderDate,productCode,ProductName and display them order no wise 
+
+select customernumber,orderno,orderDate from orders o order by orderno
+select productCode from ordersdetails od
+select productName from products p 
+
+merge them 
+
+select customernumber,o.orderNumber,orderDate,p.productCode,productName from orders o, orderdetails od,products p  where o.orderNumber=od.orderNumber and od.productCode=p.productCode order by o.orderNumber
+
+
+
