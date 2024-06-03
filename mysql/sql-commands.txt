@@ -201,8 +201,13 @@ types of join
 inner/equi join 
     inner or equi join will fetch only matching data from both table. 
 left join 
+    left join fetch all records from left table and only matching records from right side table 
 right join 
+right join fetch all records from right table and only matching records from left side table 
+
+
 full join 
+fetch data from both tables 
 
 fetch customernumber,customerName,paymentdate,payment amount and display them customernumber wise. 
 
@@ -223,5 +228,17 @@ merge them
 
 select customernumber,o.orderNumber,orderDate,p.productCode,productName from orders o, orderdetails od,products p  where o.orderNumber=od.orderNumber and od.productCode=p.productCode order by o.orderNumber
 
+fetch detail of those customers who have never made payments 
 
+select * from customers c order by customernumber
+select * from payments p 
 
+select customerName,city,state,postalcode,country,p.* from customers c left join payments p on c.customernumber = p.customernumber where p.customernumber is NULL 
+
+fetch payment detail not made by any customers
+select customerName,city,state,postalcode,country,p.* from customers c right join payments p on c.customernumber = p.customernumber where c.customernumber is NULL 
+
+full join 
+--------------------
+
+select c.customernumber,customerName,city,state,postalcode,country,p.* from customers c , payments p 
