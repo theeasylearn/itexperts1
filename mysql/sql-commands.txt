@@ -233,6 +233,31 @@ fetch detail of those customers who have never made payments
 select * from customers c order by customernumber
 select * from payments p 
 
+
+findout customer detail who has paid minimum amount
+---------------------------------------------------
+select * from customers
+select min(amount) from payments 
+
+select * from customers where customerNumber in (select customerNumber from payments where amount=(select min(amount) from payments));
+
+select customerNumber,amount from payments where amount = (select min(amount) from payments)
+
+
+findout customerNumber and payment amout who has made maximum payments 
+
+select customerNumber,amount from payments where amount = (select max(amount) from payments)
+
+
+findout all customers who are from the country of signal gift store. 
+select country from customers where customerName = 'Signal gift store'
+
+select * from customers c where country = (select country from customers where customerName = 'Signal gift store') and customerName!=' 'Signal gift store'
+
+findout those customers data whose creditlimit is lower then signal gift store creditlimit.
+select creditlimit from customers where customerName='Signal gift store';
+select * from customers c where creditlimit<(select creditlimit from customers where customerName='Signal gift store')
+
 select customerName,city,state,postalcode,country,p.* from customers c left join payments p on c.customernumber = p.customernumber where p.customernumber is NULL 
 
 fetch payment detail not made by any customers
