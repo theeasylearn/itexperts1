@@ -12,12 +12,9 @@
         require_once('subject.php');
         //object = new class()
         $web = new Subject('PHP','decision making, loop, function etc',180); //construtor will be called automatically 
-
         //fees will be zero
         $web->display();
-
         $mobile = new Subject('android','desiging & codeing',150,15000); //construtor will be called automatically 
-
         $mobile->display();
     ?>
 </body>
