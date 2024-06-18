@@ -1,43 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Management - Lecturer's Payment Management System</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css" />
+<?php 
+    require_once('inc/header-part.php');
+?>
 </head>
 
 <body>
-    <div id="menu">
-        <h4>Lecturer's Payment <br />Management System</h4>
-        <ul>
-            <li><a href=""><i class="fa fa-home"></i> Home</a></li>
-            <li><a href=""><i class="fa fa-book"></i> Course</a></li>
-            <li><a href=""><i class="fa fa-layer-group"></i> Batch</a></li>
-            <li><a href=""><i class="fa fa-book-open"></i> Subject</a></li>
-            <li><a href=""><i class="fa fa-chalkboard-teacher"></i> Teacher</a></li>
-            <li><a href=""><i class="fa fa-chalkboard"></i> Lecture</a></li>
-            <li><a href=""><i class="fa fa-money-check-alt"></i> Payment</a></li>
-            <li><a href=""><i class="fa fa-chart-bar"></i> Reports</a></li>
-            <li><a href=""><i class="fa fa-sign-out-alt"></i> Logout</a></li>
-        </ul>
-    </div>
+    <?php require_once('inc/menu.php'); ?>
     <div class="heading">
         <div>
             <span>Course</span>
-            <span><a>Add Course</a></span>
+            <span><a href="add_course.php">Add Course</a></span>
         </div>
     </div>
     <div class="container">
 
-        <table align="center">
+        <table align="center" class="data">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -75,5 +51,6 @@
         </table>
     </div>
 </body>
-
-</html>
+<?php 
+    require_once('inc/footer.php');
+?>
