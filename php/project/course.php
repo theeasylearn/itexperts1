@@ -1,5 +1,5 @@
-<?php 
-    require_once('inc/header-part.php');
+<?php
+require_once('inc/header-part.php');
 ?>
 </head>
 
@@ -32,8 +32,8 @@
                     <td>180 days</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est, nemo impedit ipsam quae et veniam similique quisquam earum quos modi excepturi nesciunt neque, quas fuga itaque voluptatem quam libero.</td>
                     <td>
-                        <a href="course-edit.php"><i class="fa fa-edit fa-2x"></i></a>
-                        <a href="course-delete.php"><i class="fa fa-trash fa-2x"></i></a>
+                        <a href="edit_course.php"><i title="edit" class="fa fa-edit fa-2x"></i></a>
+                        <a href="delete_course.php"><i title="delete" class="fa fa-trash fa-2x"></i></a>
                     </td>
                 </tr>
                 <tr>
@@ -43,14 +43,14 @@
                     <td>200 days</td>
                     <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est, nemo impedit ipsam quae et veniam similique quisquam earum quos modi excepturi nesciunt neque, quas fuga itaque voluptatem quam libero.</td>
                     <td>
-                        <a href="course-edit.php"><i class="fa fa-edit fa-2x"></i></a>
-                        <a href="course-delete.php"><i class="fa fa-trash fa-2x"></i></a>
+                        <a href="edit_course.php"><i title="edit" class="fa fa-edit fa-2x"></i></a>
+                        <a href="delete_course.php"><i title="delete" class="fa fa-trash fa-2x"></i></a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
 </body>
-<?php 
-    require_once('inc/footer.php');
+<?php
+require_once('inc/footer.php');
 ?>

@@ -7,37 +7,38 @@ require_once('inc/header-part.php');
     <?php require_once('inc/menu.php'); ?>
     <div class="heading">
         <div>
-            <span>Course -> Add Course</span>
-            <span><a href="course.php">BACK</a></span>
+            <span>Batch -> Add Batch</span>
+            <span><a href="batch.php">BACK</a></span>
         </div>
     </div>
     <div class="container white-form">
         <form action="">
             <table id="input-table">
                 <tr>
-                    <td width='33%'>Title</td>
+                    <td width='33%'>Select course</td>
                     <td>
-                        <input type="text" name="title" id="title" class="input-box" required />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Fees</td>
-                    <td>
-                        <input type="number" name="fees" id="fees" class="input-box" required />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Duration (in days)</td>
-                    <td>
-                        <input type="number" name="duration" id="duration" class="input-box" required />
-                    </td>
-                </tr>
-                <tr>
-                    <td>description</td>
-                    <td>
-                        <textarea class="input-box" name="description" id="description">
+                        <select name="courseid" id="courseid" class="input-box" required>
+                            <option value="">select course</option>
 
-                        </textarea>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Start date</td>
+                    <td>
+                        <input type="date" name="startdate" id="startdate" class="input-box" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>End date </td>
+                    <td>
+                        <input type="date" name="enddate" id="enddate" class="input-box" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>class time</td>
+                    <td>
+                        <input type="text" name="classtime" id="classtime" class="input-box" required />
                     </td>
                 </tr>
                 <tr>
