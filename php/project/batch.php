@@ -1,8 +1,7 @@
 <?php
-require_once('inc/header-part.php');
+    require_once('inc/header-part.php');
 ?>
 </head>
-
 <body>
     <?php require_once('inc/menu.php'); ?>
     <div class="heading">

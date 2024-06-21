@@ -8,7 +8,7 @@
         <li><a href="teacher.php"><i class="fa fa-chalkboard-teacher"></i> Teacher</a></li>
         <li><a href="lecture.php"><i class="fa fa-chalkboard"></i> Lecture</a></li>
         <li><a href="payment.php"><i class="fa fa-money-check-alt"></i> Payment</a></li>
-        <li><a href="reports.php"><i class="fa fa-chart-bar"></i> Reports</a></li>
+        <li><a href="report.php"><i class="fa fa-chart-bar"></i> Reports</a></li>
         <li><a href="logout.php"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
     </ul>
 </div>
