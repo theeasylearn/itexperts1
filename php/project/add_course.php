@@ -12,7 +12,7 @@ require_once('inc/header-part.php');
         </div>
     </div>
     <div class="container white-form">
-        <form action="">
+        <form method="post" action="submit/insert_course.php">
             <table id="input-table">
                 <tr>
                     <td width='33%'>Title</td>
@@ -35,7 +35,7 @@ require_once('inc/header-part.php');
                 <tr>
                     <td>description</td>
                     <td>
-                        <textarea class="input-box" name="description" id="description">
+                        <textarea class="input-box" name="description" id="description" required>
 
                         </textarea>
                     </td>

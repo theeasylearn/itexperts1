@@ -187,3 +187,15 @@
           border-radius: 5px;
           color: #8e44ad;
       }
+      .success
+      {
+        width:88%;
+        margin:auto;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding:10px;
+        background-color: greenyellow;
+        color:green;
+        font-weight: bold;
+        font-size: large;
+      }

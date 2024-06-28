@@ -28,7 +28,7 @@ try
 {
     $db= new PDO("mysql:host=".SERVER.";dbname=".DATABASE,USERNAME,PASSWORD);
     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    echo "Connection is created ";
+    //echo "Connection is created ";
 }
 catch(PDOException$error)
 {

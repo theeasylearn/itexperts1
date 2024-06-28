@@ -12,7 +12,10 @@ require_once('inc/header-part.php');
         </div>
     </div>
     <div class="container">
-
+        <?php 
+            if(isset($_REQUEST['success'])==true)
+                echo "<div class='success'>{$_REQUEST['success']}</div>";
+        ?>
         <table align="center" class="data">
             <thead>
                 <tr>
