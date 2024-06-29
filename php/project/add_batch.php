@@ -12,14 +12,16 @@ require_once('inc/header-part.php');
         </div>
     </div>
     <div class="container white-form">
-        <form action="">
+        <form action="submit/insert_batch.php" method="post">
             <table id="input-table">
                 <tr>
                     <td width='33%'>Select course</td>
                     <td>
                         <select name="courseid" id="courseid" class="input-box" required>
                             <option value="">select course</option>
-
+                            <option value="6">ASI</option>
+                            <option value="4">CLERK</option>
+                            <option value="2">PSI</option>
                         </select>
                     </td>
                 </tr>
