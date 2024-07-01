@@ -1,7 +1,8 @@
 <?php
-    require_once('inc/header-part.php');
+require_once('inc/header-part.php');
 ?>
 </head>
+
 <body>
     <?php require_once('inc/menu.php'); ?>
     <div class="heading">
@@ -11,10 +12,7 @@
         </div>
     </div>
     <div class="container">
-        <?php
-            if(isset($_REQUEST['success'])==true)
-                echo "<div class='success'>{$_REQUEST['success']}</div>";
-        ?>
+        <?php require_once('inc/message.php'); ?>
         <table align="center" class="data">
             <thead>
                 <tr>

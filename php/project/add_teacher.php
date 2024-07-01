@@ -12,7 +12,8 @@ require_once('inc/header-part.php');
         </div>
     </div>
     <div class="container white-form">
-        <form action="">
+        <form action="submit/insert_teacher.php" method="post"
+            enctype="multipart/form-data">
             <table id="input-table">
                 <tr>
                     <td width='33%'>fullname</td>
@@ -52,9 +53,9 @@ require_once('inc/header-part.php');
                     </td>
                 </tr>
                 <tr>
-                    <td>Photo</td>
+                    <td>Photo (must not exceed 2MB)</td>
                     <td>
-                        <input type="file" name="photo" id="photo" accept="image/*" required>
+                        <input type="file" name="photo" id="photo" accept="image/*" required />
                     </td>
                 </tr>
                 <tr>

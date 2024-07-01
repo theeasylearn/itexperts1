@@ -12,6 +12,7 @@ require_once('inc/header-part.php');
         </div>
     </div>
     <div class="container">
+        <?php require_once('inc/message.php'); ?>
         <table align="center" class="data">
             <thead>
                 <tr>
