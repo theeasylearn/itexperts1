@@ -12,8 +12,7 @@ require_once('inc/header-part.php');
         </div>
     </div>
     <div class="container white-form">
-        <form action="submit/insert_teacher.php" method="post"
-            enctype="multipart/form-data">
+        <form action="submit/insert_teacher.php" method="post" enctype="multipart/form-data">
             <table id="input-table">
                 <tr>
                     <td width='33%'>fullname</td>
@@ -60,7 +59,7 @@ require_once('inc/header-part.php');
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <button type="submit" class="save">
+                        <button id="submit" type="submit" class="save">
                             <i class="fa fa-save"></i> Save
                         </button>
                         <button type="reset" class="clear">
@@ -71,6 +70,21 @@ require_once('inc/header-part.php');
             </table>
         </form>
     </div>
+    <script src="jquery_lib.js"></script>
+    <script>
+        //get size of the file and ensure it is less then 2mb
+        $('#photo').bind('change', function() {
+            //this.files[0].size gets the size of your file.
+            var size = parseInt(parseInt(this.files[0].size) / 1024);
+            if (size > 2048) {
+                alert("photo size must not exceed 2 MB limit");
+                $("#submit").attr("disabled", true);
+            } else {
+                $("#submit").attr("disabled", false);
+
+            }
+        });
+    </script>
 </body>
 <?php
 require_once('inc/footer.php');
