@@ -7,12 +7,16 @@ require_once('inc/header-part.php');
     <?php require_once('inc/menu.php'); ?>
     <div class="heading">
         <div>
-            <span>Lecture</span>
+            <span>Lecture</span> 
             <span><a href="add_lecture.php">Add Lecture</a></span>
         </div>
     </div>
     <div class="container">
+<<<<<<< HEAD
 
+=======
+        <?php require_once("inc/message.php"); ?>
+>>>>>>> 2c7c941 (test)
         <table align="center" class="data">
             <thead>
                 <tr>
