@@ -7,6 +7,7 @@ Tables
     teacher (id,name,mobile,email,gender,qulification,experience,photo)
     lecture(id,teacherid,subjectid,batchid,duration,amount,lecturedate,payoutid)
     payout(id,teacherid,orderdate,remarks,startdate,enddate)
+    
 Module 
     1) course management  (works on course)
         insert,update,delete,select
