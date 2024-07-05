@@ -1,6 +1,8 @@
 <?php
+require_once("inc/connection.php");
 require_once('inc/header-part.php');
 ?>
+<link rel="stylesheet" href="dist/css/lightbox.min.css">
 </head>
 
 <body>
@@ -19,41 +21,55 @@ require_once('inc/header-part.php');
                     <th>Id</th>
                     <th>Name</th>
                     <th>Photo</th>
-                    <th>Mobile <br/>
+                    <th>Mobile <br />
                         Email
-                        </th>
+                    </th>
                     <th>Gender</th>
-                    <th>Qualification <br/>
+                    <th>Qualification <br />
                         Experience
                     </th>
                     <th width='8%'>Action</th>
                 </tr>
             </thead>
             <tbody>
+                <?php
+                $sql = "select * from teacher order by id desc";
+                $cmd = $db->prepare($sql);
+                $cmd->execute();
+                //fetch all rows 
+                $table = $cmd->fetchAll();
+                foreach ($table as $row) {
+                    extract($row);
+                ?>
+                    <tr>
+                        <td><?= $id; ?></td>
+                        <td><?= $name; ?></td>
+                        <td>
+                            <a class="example-image-link" href="images/<?= $photo; ?>" data-lightbox="example-1">
+                                <img class="example-image" height='100px' src="images/<?= $photo; ?>" alt="">
+                            </a>
+                        </td>
+                        <td>Mo : <?= $mobile; ?> <br />
+                            Email : <?= $email; ?>
+                        </td>
+                        <td><?= $gender; ?></td>
+                        <td>
+                            <?= $qualification; ?>
+                        </td>
+                        <td>
+                            <a href="edit_teacher.php"><i title="edit" class="fa fa-edit fa-2x"></i></a>
+                            <a href="delete_teacher.php"><i title="delete" class="fa fa-trash fa-2x"></i></a>
+                        </td>
+                    </tr>
+                <?php } //end of loop 
+                ?>
                 <tr>
-                    <td>1</td>
-                    <td>Rahul Mehta</td>
-                    <td>
-                        <img src="http://picsum.photos/100" alt="">
-                    </td>
-                    <td>Mo : 1234567890 <br/>
-                        Email : rahul@gmail.com
-                    </td>
-                    <td>Male</td>
-                    <td>
-                        M.com, B.ed 
-                    </td>
-                    <td>
-                        <a href="edit_teacher.php"><i title="edit" class="fa fa-edit fa-2x"></i></a>
-                        <a href="delete_teacher.php"><i title="delete" class="fa fa-trash fa-2x"></i></a>
-                    </td>
-                </tr>
-                <tr>
-             
+
                 </tr>
             </tbody>
         </table>
     </div>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 <?php
 require_once('inc/footer.php');

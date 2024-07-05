@@ -1,5 +1,7 @@
 <?php
+require_once("inc/connection.php");
 require_once('inc/header-part.php');
+
 ?>
 </head>
 
@@ -24,16 +26,27 @@ require_once('inc/header-part.php');
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>P.S.I.</td>
-                    <td>History</td>
-                    <td>1000</td>
-                    <td>
-                        <a href="edit_subject.php"><i title="edit" class="fa fa-edit fa-2x"></i></a>
-                        <a href="delete_subject.php"><i title="delete" class="fa fa-trash fa-2x"></i></a>
-                    </td>
-                </tr>
+                <?php
+                $sql = "select s.*,c.title as 'coursetitle' from subject s,course c where courseid=c.id order by s.id desc";
+                $cmd = $db->prepare($sql);
+                $cmd->execute();
+                //fetch all rows 
+                $table = $cmd->fetchAll();
+                //var_dump($table);
+                foreach ($table as $row) {
+                ?>
+                    <tr>
+                        <td><?= $row['id']; ?></td>
+                        <td><?= $row['coursetitle']; ?></td>
+                        <td><?= $row['title']; ?></td>
+                        <td><?= $row['rate']; ?></td>
+                        <td>
+                            <a href="edit_subject.php"><i title="edit" class="fa fa-edit fa-2x"></i></a>
+                            <a href="delete_subject.php"><i title="delete" class="fa fa-trash fa-2x"></i></a>
+                        </td>
+                    </tr>
+                <?php } //end of loop 
+                ?>
             </tbody>
         </table>
     </div>
