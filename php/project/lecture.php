@@ -1,4 +1,5 @@
 <?php
+require_once("inc/connection.php");
 require_once('inc/header-part.php');
 ?>
 </head>
@@ -7,21 +8,20 @@ require_once('inc/header-part.php');
     <?php require_once('inc/menu.php'); ?>
     <div class="heading">
         <div>
-            <span>Lecture</span> 
+            <span>Lecture</span>
             <span><a href="add_lecture.php">Add Lecture</a></span>
         </div>
     </div>
     <div class="container">
-<<<<<<< HEAD
-
-=======
-        <?php require_once("inc/message.php"); ?>
->>>>>>> 2c7c941 (test)
+        <?php
+        require_once("inc/message.php");
+        ?>
         <table align="center" class="data">
             <thead>
                 <tr>
                     <th width='3%'>Action</th>
                     <th>Id</th>
+                    <th>Course</th>
                     <th>Batch</th>
                     <th>Subject</th>
                     <th>Teacher</th>
@@ -32,22 +32,37 @@ require_once('inc/header-part.php');
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <input type="checkbox" name="" id="">
-                    </td>
-                    <td>1</td>
-                    <td>Morning 6 to 8</td>
-                    <td>History</td>
-                    <td>Ramlal gupta</td>
-                    <td>120 minutes</td>
-                    <td>2000</td>
-                    <td>20-06-2024</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-             
-                </tr>
+                <?php
+                $sql = "select l.id as id, l.duration as duration,amount,lecturedate,payoutid,t.name,c.title as coursetitle, s.title as subjecttitle,classtime from lecture l,course c, subject s, teacher t,batch b where l.batchid=b.id and l.teacherid=t.id and l.subjectid=s.id and b.courseid=c.id order by l.id desc";
+                $cmd = $db->prepare($sql);
+                $cmd->execute();
+                $table = $cmd->fetchAll();
+                foreach ($table as $row) {
+                    extract($row);
+                ?>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" id="">
+                        </td>
+                        <td><?= $id; ?></td>
+                        <td><?= $coursetitle; ?></td>
+                        <td><?= $classtime; ?></td>
+                        <td><?= $subjecttitle; ?></td>
+                        <td><?= $name; ?></td>
+                        <td><?= $duration; ?> minutes</td>
+                        <td><?= $amount; ?></td>
+                        <td><?= $lecturedate; ?></td>
+                        <td><?php 
+                            if($payoutid == null)
+                                echo "No";
+                            else 
+                                $payoutid;
+                        ?></td>
+                    </tr>
+                <?php
+                }
+                ?>
+
             </tbody>
         </table>
     </div>
