@@ -1,5 +1,6 @@
 <?php
-require_once('inc/header-part.php');
+    require_once('inc/header-part.php');
+    require_once('inc/connection.php');
 ?>
 </head>
 
@@ -19,9 +20,16 @@ require_once('inc/header-part.php');
                     <td>
                         <select name="courseid" id="courseid" class="input-box" required>
                             <option value="">select course</option>
-                            <option value="6">ASI</option>
-                            <option value="4">CLERK</option>
-                            <option value="2">PSI</option>
+<?php 
+    $sql = "select id,title from course order by title";
+    $cmd = $db->prepare($sql);
+    $cmd->execute();
+    $table = $cmd->fetchAll();
+    foreach($table as $row)
+    {
+        echo "<option value={$row['id']}>{$row['title']}</option>";
+    }
+?>
                         </select>
                     </td>
                 </tr>

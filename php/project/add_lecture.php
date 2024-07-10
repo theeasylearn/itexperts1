@@ -1,5 +1,6 @@
 <?php
-require_once('inc/header-part.php');
+    require_once('inc/header-part.php');
+    require_once('inc/connection.php');
 ?>
 </head>
 
@@ -19,9 +20,15 @@ require_once('inc/header-part.php');
                     <td>
                         <select name="teacherid" id="teacherid" required>
                             <option value="">Select Teacher</option>
-                            <option value="1">Ghanshyam Panday</option>
-                            <option value="2">Mohan Sharma</option>
-                            <option value="3">Vidhi</option>
+                            <?php
+                            $sql = "select id,name from teacher order by name";
+                            $cmd = $db->prepare($sql);
+                            $cmd->execute();
+                            $table = $cmd->fetchAll();
+                            foreach ($table as $row) {
+                                echo "<option value={$row['id']}>{$row['name']}</option>";
+                            }
+                            ?>
                         </select>
                     </td>
                 </tr>
@@ -30,9 +37,15 @@ require_once('inc/header-part.php');
                     <td>
                         <select name="subjectid" id="subjectid" required>
                             <option value="">Select Subject</option>
-                            <option value="1">Indian Laws</option>
-                            <option value="2">Accounting</option>
-                            <option value="3">Geography</option>
+                            <?php
+                            $sql = "select id,title from subject order by title";
+                            $cmd = $db->prepare($sql);
+                            $cmd->execute();
+                            $table = $cmd->fetchAll();
+                            foreach ($table as $row) {
+                                echo "<option value={$row['id']}>{$row['title']}</option>";
+                            }
+                            ?>
                         </select>
                     </td>
                 </tr>
@@ -41,9 +54,15 @@ require_once('inc/header-part.php');
                     <td>
                         <select name="batchid" id="batchid" required>
                             <option value="">Select Batch</option>
-                            <!-- Add options for batches here -->
-                             <option value="1">8 TO 10</option>
-                             <option value="2">8 TO 10 (batch 2)</option>
+                            <?php
+                            $sql = "select id,classtime from batch order by classtime";
+                            $cmd = $db->prepare($sql);
+                            $cmd->execute();
+                            $table = $cmd->fetchAll();
+                            foreach ($table as $row) {
+                                echo "<option value={$row['id']}>{$row['classtime']}</option>";
+                            }
+                            ?>
                         </select>
                     </td>
                 </tr>
