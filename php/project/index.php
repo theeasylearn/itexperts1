@@ -1,12 +1,13 @@
 <?php
 require_once('inc/header-part.php');
+require_once('inc/connection.php');
 ?>
 </head>
 
 <body>
 
     <div class="container">
-        <form action="">
+        <form action="submit/verify_user.php" method="post">
             <table width='50%' align="center" border="2" cellpadding=10>
                 <tr>
                     <td colspan="2" align="center">
@@ -37,6 +38,13 @@ require_once('inc/header-part.php');
                         <button type="reset" class="clear">
                             <i class="fa fa-trash"></i> clear all
                         </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <?php
+                        include_once('inc/message.php');
+                        ?>
                     </td>
                 </tr>
                 <tr>
