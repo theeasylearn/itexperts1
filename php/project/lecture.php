@@ -1,6 +1,9 @@
 <?php
-require_once("inc/connection.php");
-require_once('inc/header-part.php');
+    session_start();
+    if(isset($_SESSION['userid'])==false)
+        header("location:index.php?error=you need to login first");
+    require_once("inc/connection.php");
+    require_once('inc/header-part.php');
 ?>
 </head>
 
