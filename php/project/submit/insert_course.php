@@ -1,4 +1,4 @@
-<?php 
+<?php
     require_once("../inc/verify_login.php");
     //check do we get all input or not
     require_once("../inc/verify_input.php");
