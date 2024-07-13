@@ -1,6 +1,7 @@
 <?php
-    require_once('inc/header-part.php');
-    require_once('inc/connection.php');
+require_once("inc/verify_login.php");
+require_once('inc/header-part.php');
+require_once('inc/connection.php');
 ?>
 </head>
 
@@ -20,16 +21,15 @@
                     <td>
                         <select name="courseid" id="courseid" class="input-box" required>
                             <option value="">select course</option>
-<?php 
-    $sql = "select id,title from course order by title";
-    $cmd = $db->prepare($sql);
-    $cmd->execute();
-    $table = $cmd->fetchAll();
-    foreach($table as $row)
-    {
-        echo "<option value={$row['id']}>{$row['title']}</option>";
-    }
-?>
+                            <?php
+                            $sql = "select id,title from course order by title";
+                            $cmd = $db->prepare($sql);
+                            $cmd->execute();
+                            $table = $cmd->fetchAll();
+                            foreach ($table as $row) {
+                                echo "<option value={$row['id']}>{$row['title']}</option>";
+                            }
+                            ?>
                         </select>
                     </td>
                 </tr>
@@ -53,12 +53,17 @@
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <button type="submit" class="save">
+                        <button name="submit" type="submit" class="save">
                             <i class="fa fa-save"></i> Save
                         </button>
                         <button type="reset" class="clear">
                             <i class="fa fa-trash"></i> clear all
                         </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <?php require_once("inc/message.php") ?>
                     </td>
                 </tr>
             </table>

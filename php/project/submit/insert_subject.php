@@ -1,5 +1,7 @@
 <?php 
-    // var_dump($_POST);
+    / require_once("../inc/verify_login.php");
+    //check do we get all input or not
+    require_once("../inc/verify_input.php");
     //create database connection
     require_once('../inc/connection.php');
     //create query 

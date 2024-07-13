@@ -1,9 +1,7 @@
 <?php
-    session_start();
-    if(isset($_SESSION['userid'])==false)
-        header("location:index.php?error=you need to login first");
-    require_once("inc/connection.php");
-    require_once('inc/header-part.php');
+require_once("inc/verify_login.php");
+require_once("inc/connection.php");
+require_once('inc/header-part.php');
 ?>
 </head>
 
@@ -55,12 +53,12 @@
                         <td><?= $duration; ?> minutes</td>
                         <td><?= $amount; ?></td>
                         <td><?= $lecturedate; ?></td>
-                        <td><?php 
-                            if($payoutid == null)
+                        <td><?php
+                            if ($payoutid == null)
                                 echo "No";
-                            else 
+                            else
                                 $payoutid;
-                        ?></td>
+                            ?></td>
                     </tr>
                 <?php
                 }

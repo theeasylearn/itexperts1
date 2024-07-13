@@ -1,4 +1,5 @@
 <?php
+require_once("inc/verify_login.php");
 require_once('inc/header-part.php');
 ?>
 </head>
@@ -59,12 +60,17 @@ require_once('inc/header-part.php');
                 </tr>
                 <tr>
                     <td colspan="2" align="center">
-                        <button id="submit" type="submit" class="save">
+                        <button name="submit" id="submit" type="submit" class="save">
                             <i class="fa fa-save"></i> Save
                         </button>
                         <button type="reset" class="clear">
                             <i class="fa fa-trash"></i> clear all
                         </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='2'>
+                        <?php require_once("inc/message.php") ?>
                     </td>
                 </tr>
             </table>

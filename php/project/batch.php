@@ -1,4 +1,5 @@
 <?php
+require_once("inc/verify_login.php");
 require_once('inc/connection.php');
 require_once('inc/datetime_functions.php');
 require_once('inc/header-part.php');

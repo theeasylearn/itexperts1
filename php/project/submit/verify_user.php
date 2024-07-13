@@ -17,6 +17,8 @@ if (sizeof($table) == 0) {
     echo "user given password = $password and Hashed password = $HashedPassword";
     if (password_verify($password, $HashedPassword) == true)
     {
+        //create session variable userid which has id of the user logged in 
+        //this variable is only created after use logged in successfully
         $_SESSION['userid'] = $table[0]['id'];
         $message = "login successfull";
         header("location:../lecture.php?success=$message");
