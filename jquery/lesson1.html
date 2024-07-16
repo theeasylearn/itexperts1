@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box 
+        {
+            border: 1px solid black;
+            padding:10px;
+            display: flex;
+        }
+        #box>p
+        {
+            border: 2px solid red;
+            background-color: blue;
+            height:200px;
+            width:200px;
+            margin-right: 20px;
+            color:white;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="show all" id="showall" />
+    <div id="box">
+        <p>Click me to hide 1</p>
+        <p>Click me to hide 2</p>
+        <p>Click me to hide 3</p>
+        <p>Click me to hide 4</p>
+    </div>
+    <!-- jquery cdn (internet is required)-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <!-- local jquery -->
+    <script src="jquery-min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // alert('working');Click me to hide
+            $("p").click(function(){
+                // $(this).hide();
+                // $(this).hide('slow');
+                // $(this).hide('fast');
+                // $(this).hide(2000);
+                $(this).hide(2000,function(){
+                    alert('paragraph disappeared')
+                });
+            });
+
+            $("#showall").click(function(){
+                $("p").show("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>
