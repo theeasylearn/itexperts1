@@ -28,6 +28,7 @@
 
 <body>
     <input type="button" value="show all" id="showall" />
+    <input type="button" value="toggle all" class="toggleall" />
     <div id="box">
         <p>Click me to hide 1</p>
         <p>Click me to hide 2</p>
@@ -54,6 +55,10 @@
 
             $("#showall").click(function(){
                 $("p").show("slow");
+            });
+
+            $(".toggleall").click(function(){
+                $("p").toggle();
             });
         });
     </script>
