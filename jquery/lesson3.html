@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            border: 1px solid black;
+            padding: 10px;
+            display: flex;
+        }
+    
+        #box>p {
+            border: 2px solid red;
+            background-color: green;
+            height: 200px;
+            width: 200px;
+            margin-right: 20px;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <table width="50" align="center">
+        <tr>
+            <td>
+                <input type="button" value="slide up" id="slideup" />
+            </td> 
+            <td>
+                <input type="button" value="slide down" id="slidedown" />
+            </td> 
+            <td>
+                <input type="button" value="slide toggle" id="slidetoggle" />
+            </td> 
+        </tr>
+    </table>
+    <div id="box">
+        <p> 1</p>
+        <p> 2</p>
+        <p> 3</p>
+        <p> 4</p>
+    </div>
+
+
+    <!-- jquery cdn (internet is required)-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <!-- local jquery -->
+    <script src="jquery-min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#slideup").click(function(){
+                // $("p").fadeIn();
+                $("p").slideUp("slow");
+            });
+
+            $("#slidedown").click(function(){
+                // $("p").fadeOut();
+                $("p").slideDown("slow");
+            });
+
+            $("#slidetoggle").click(function () {
+                // $("p").fadeOut();
+                $("p").slideToggle(2000);
+            });
+
+            
+        });
+    </script>
+</body>
+
+</html>

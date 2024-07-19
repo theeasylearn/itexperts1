@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #owl 
+        {
+            height:300px;
+            position: absolute;
+            left: 200px;
+            top:200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="owl.png" id="owl">
+    <!-- jquery cdn (internet is required)-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <!-- local jquery -->
+     <script src="jquery-min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $("#owl").click(function(){
+                // alert('hi');
+                $(this).animate({top:'100px'},1000).animate({ top: '200px' }, 1000)
+            });
+            $("#owl").dblclick(function () {
+                
+                $(this).stop(true,true)
+            });
+        });
+     </script>
+</body>
+
+</html>
