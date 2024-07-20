@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.image-container {
+    overflow: hidden;
+    /* Ensures that the zoomed image does not overflow the container */
+    width: 300px;
+    /* Set a fixed width for the container */
+    height: 300px;
+    /* Set a fixed height for the container */
+    position: relative;
+    /* Position relative for absolute positioning of the image */
+}
+
+.zoom-image {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.5s ease;
+    /* Smooth transition for zoom effect */
+    position: absolute;
+    /* Position the image absolutely within the container */
+    top: 50%;
+    /* Center the image vertically */
+    left: 50%;
+    /* Center the image horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust to center the image */
+}
+
+.image-container:hover .zoom-image {
+    transform: translate(-50%, -50%) scale(1.2);
+    /* Zoom in on hover */
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" width="100%">
+        <tr>
+            <td>
+                <form id="form1">
+                    <table border="1" width="100%" cellpadding="10">
+                        <tr>
+                            <td>
+                                <input type="text" id="name" required placeholder="Product Name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="number" id="price" required placeholder="Price" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="number" id="quantity" required placeholder="Quantity" />
+    
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Add Product" />
+    
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td width="80%" valign="top">
+                <table border="1" align="center" width="100%">
+                    <thead>
+                        <tr>
+                            <th width="5%">Sr No</th>
+                            <th width="35%">Name</th>
+                            <th width="20%">Price</th>
+                            <th width="10%">quantity</th>
+                            <th width="10%">tax</th>
+                            <th>total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="output">
+    
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- jquery cdn (internet is required)-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <!-- local jquery -->
+     <script src="jquery-min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $("#form1").submit(function(e){
+                // alert('form submit');
+                let name = $("#name").val();
+                let price = $("#price").val();
+                let quantity = $("#quantity").val();
+                console.log(name,price,quantity);
+                return false;
+            });
+        })
+     </script>
+</body>
+
+</html>

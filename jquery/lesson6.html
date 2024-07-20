@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ICC Men's Cricket Teams</h1>
+    <table border="1" width="80%" cellpadding="10" align="center">
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>Ranking</th>
+                <th>Flag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>India</td>
+                <td>1</td>
+                <td><img src="https://flagcdn.com/w320/in.png" alt="India Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>Australia</td>
+                <td>2</td>
+                <td><img src="https://flagcdn.com/w320/au.png" alt="Australia Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>England</td>
+                <td>3</td>
+                <td><img src="https://flagcdn.com/w320/gb.png" alt="England Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>Pakistan</td>
+                <td>4</td>
+                <td><img src="https://flagcdn.com/w320/pk.png" alt="Pakistan Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>New Zealand</td>
+                <td>5</td>
+                <td><img src="https://flagcdn.com/w320/nz.png" alt="New Zealand Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>South Africa</td>
+                <td>6</td>
+                <td><img src="https://flagcdn.com/w320/za.png" alt="South Africa Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>Bangladesh</td>
+                <td>7</td>
+                <td><img src="https://flagcdn.com/w320/bd.png" alt="Bangladesh Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>West Indies</td>
+                <td>8</td>
+                <td><img src="https://flagcdn.com/w320/wi.png" alt="West Indies Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>Sri Lanka</td>
+                <td>9</td>
+                <td><img src="https://flagcdn.com/w320/lk.png" alt="Sri Lanka Flag" width="50"></td>
+            </tr>
+            <tr>
+                <td>Afghanistan</td>
+                <td>10</td>
+                <td><img src="https://flagcdn.com/w320/af.png" alt="Afghanistan Flag" width="50"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- jquery cdn (internet is required)-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <!-- local jquery -->
+     <script src="jquery-min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $("tr").mouseenter(function(){
+                $(this).attr("bgcolor","#eeeeee");
+            });
+            
+            $("tr").mouseleave(function(){
+                $(this).attr("bgcolor","#ffffff");
+            });
+            
+        });
+     </script>
+</body>
+
+</html>

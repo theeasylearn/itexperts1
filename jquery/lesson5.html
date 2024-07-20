@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+
+    <div class="image-container" style="text-align: center;">
+        <img src="owl.png" alt="Zoomable Image" class="zoom-image" height="300">
+    </div>
+
+    <!-- jquery cdn (internet is required)-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
+    <!-- local jquery -->
+     <script src="jquery-min.js"></script>
+     <script>
+        $(document).ready(function(){
+            $(".zoom-image").mouseover(function(){
+                $(this).attr("height","400px");
+                // $(this).attr("width","400px");
+            })
+
+             $(".zoom-image").mouseout(function () {
+                $(this).attr("height", "300px");
+                // $(this).attr("width","400px");
+            })
+        });
+     </script>
+</body>
+
+</html>
