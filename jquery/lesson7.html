@@ -5,9 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
+    <input type="button" value="clear all" id="remove" />
+    <input type="button" value="empty table" id="empty" />
     <table border="1" width="100%">
         <tr>
             <td>
@@ -26,13 +35,13 @@
                         <tr>
                             <td>
                                 <input type="number" id="quantity" required placeholder="Quantity" />
-    
+
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <input type="submit" value="Add Product" />
-    
+
                             </td>
                         </tr>
                     </table>
@@ -48,10 +57,11 @@
                             <th width="10%">quantity</th>
                             <th width="10%">tax</th>
                             <th>total</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody id="output">
-    
+
                     </tbody>
                 </table>
             </td>
@@ -61,19 +71,59 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 
     <!-- local jquery -->
-     <script src="jquery-min.js"></script>
-     <script>
-        $(document).ready(function(){
-            $("#form1").submit(function(e){
+    <script src="jquery-min.js"></script>
+    <script>
+        let generateSrNo = function () {
+            $("#output").find("tr").each(function (index, item) {
+                $(item).find('td:first-child').each(function (SelectedTd) {
+                    $(this).html(index + 1);
+                });
+            });
+        }
+        $(document).ready(function () {
+            $("#remove").click(function () {
+                $("table").remove();
+            })
+            $("#empty").click(function () {
+                $("table").empty();
+            });
+
+            //this is how we handle events for dynamically(programatically)
+            // added html tags.
+            $('#output').on('mouseover', 'tr', function () {
+                $(this).addClass('highlight');
+            });
+
+            $('#output').on('mouseout', 'tr', function () {
+                $(this).removeClass('highlight');
+            });
+            $("#output").on('click','.delete',function(){
+                //alert('button clicked');
+                var tr = $(this).parent().parent();
+                $(tr).fadeOut(1000,function(){
+                    $(tr).remove();
+                });
+            })
+            $("#form1").submit(function (e) {
                 // alert('form submit');
                 let name = $("#name").val();
                 let price = $("#price").val();
                 let quantity = $("#quantity").val();
-                console.log(name,price,quantity);
+                let total = parseInt(price) * parseInt(quantity);
+                let tax = (total * 0.10).toFixed(2);
+                total = total + tax;
+                console.log(name, price, quantity);
+                // $("#output").html(`<tr><td></td><td>${name}</td><td>${price}</td><td>${quantity}</td><td>${tax}</td><td>${total}</td></tr>`);
+                // $("#output").append(`<tr><td>${srno++}</td><td>${name}</td><td>${price}</td><td>${quantity}</td><td>${tax}</td><td>${total}</td></tr>`);
+                $("#output").prepend(`<tr><td></td><td>${name}</td><td>${price}</td><td>${quantity}</td><td>${tax}</td><td>${total}</td><td><button type='submit' class='delete'>Delete</button></td></tr>`);
+                $("#name").val(""); //set textbox to empty value;
+                $("#price").val(""); //set textbox to empty value;
+                $("#quantity").val(""); //set textbox to empty value;
+                generateSrNo();
                 return false;
             });
         })
-     </script>
+    </script>
 </body>
 
 </html>
