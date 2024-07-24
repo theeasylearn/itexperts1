@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>load method demo</h1>
+  
+    <h2 id="output">output will be displayed here</h2>
+    <!-- jquery cdn (internet is required)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //we want to change time at every seconds
+        setInterval(() => {
+            //whatever we code written here will be execute after given interval in milliseconds
+            $("#output").load("http://localhost/itexperts1/jquery/gettime.php");
+        }, 1000);
+    </script>
+</body>
+
+</html>
