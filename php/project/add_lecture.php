@@ -34,23 +34,6 @@ require_once('inc/connection.php');
                     </td>
                 </tr>
                 <tr>
-                    <td>Subject ID</td>
-                    <td>
-                        <select name="subjectid" id="subjectid" required>
-                            <option value="">Select Subject</option>
-                            <?php
-                            $sql = "select id,title from subject order by title";
-                            $cmd = $db->prepare($sql);
-                            $cmd->execute();
-                            $table = $cmd->fetchAll();
-                            foreach ($table as $row) {
-                                echo "<option value={$row['id']}>{$row['title']}</option>";
-                            }
-                            ?>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
                     <td>Batch ID</td>
                     <td>
                         <select name="batchid" id="batchid" required>
@@ -67,6 +50,16 @@ require_once('inc/connection.php');
                         </select>
                     </td>
                 </tr>
+                <tr>
+                    <td>Subject ID</td>
+                    <td id="output">
+                        <select name="subjectid" id="subjectid" required>
+                            <option value="">Select Subject</option>
+
+                        </select>
+                    </td>
+                </tr>
+
                 <tr>
                     <td>Duration (Minutes)</td>
                     <td>
@@ -104,6 +97,19 @@ require_once('inc/connection.php');
         </form>
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("#batchid").change(function(){
+                // alert('batch changed');//
+                let ajaxurl = "ajax/getsubject.php?batchid=" + $(this).val();
+                // alert(ajaxurl);
+                $.get(ajaxurl,function(data,status){
+                    $("#output").html(data);
+                });
+           });
+        });
+    </script>
 </body>
 <?php
 require_once('inc/footer.php');
