@@ -28,7 +28,7 @@
             </thead>
             <tbody>
                 <?php 
-                    $sql = "select * from course order by id desc";
+                    $sql = "select * from course where isdeleted=0 order by id desc";
                     $cmd = $db->prepare($sql);
                     $cmd->execute();
                     //fetch record from result one by one
