@@ -97,7 +97,7 @@ require_once('inc/connection.php');
         </form>
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="dist/jquery-min.js"></script>
     <script>
         $(document).ready(function(){
            $("#batchid").change(function(){
