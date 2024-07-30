@@ -51,35 +51,37 @@ require_once('inc/header-part.php');
             </tbody>
         </table>
     </div>
-</body>
-<script src="dist/jquery-min.js"></script>
-<script>
-    $(document).ready(function() {
-        $(".delete").click(function() {
-            let choice = confirm("are you sure you want to do this?");
-            if (choice === true) {
-                let id = $(this).parent().parent().find("td:first").html();
-                let row = $(this).parent().parent();
-                let table = 'course';
-                $.post('ajax/delete_row.php', {
-                        rowid: id,
-                        tablename: table
-                    },
-                    function(response) {
-                        // Handle success response
-                        console.log(response);
-                        // Optionally, remove the row from the table
-                        $(row).fadeOut(1000, function() {
-                            $(row).remove();
-                        })
-                    }
-                ).fail(function(error) {
-                    alert('error occured....');
-                });
-            }
+
+    <script src="dist/jquery-min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".delete").click(function() {
+                let choice = confirm("are you sure you want to do this?");
+                if (choice === true) {
+                    let id = $(this).parent().parent().find("td:first").html();
+                    let row = $(this).parent().parent();
+                    let table = 'course';
+                    var pageAddress = "ajax/delete_row.php";
+                    $.post(pageAddress, {
+                            rowid: id,
+                            tablename: table
+                        },
+                        function(response) {
+                            // Handle success response
+                            console.log(response);
+                            // Optionally, remove the row from the table
+                            $(row).fadeOut(1000, function() {
+                                $(row).remove();
+                            })
+                        }
+                    ).fail(function(error) {
+                        alert('error occured....');
+                    });
+                }
+            });
         });
-    });
-</script>
+    </script>
+</body>
 <?php
 require_once('inc/footer.php');
 ?>

@@ -57,7 +57,7 @@ require_once('inc/header-part.php');
                             <?= $qualification; ?>
                         </td>
                         <td>
-                            <a href="edit_teacher.php"><i title="edit" class="fa fa-edit fa-2x"></i></a>
+                            <a href="edit_teacher.php?teacherid=<?= $id; ?>"><i title="edit" class="fa fa-edit fa-2x"></i></a>
                             <a href="delete_teacher.php"><i title="delete" class="fa fa-trash fa-2x"></i></a>
                         </td>
                     </tr>
