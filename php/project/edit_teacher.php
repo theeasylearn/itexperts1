@@ -23,7 +23,7 @@ require_once('inc/header-part.php');
         </div>
     </div>
     <div class="container white-form">
-        <form action="">
+        <form action="submit/update-teacher.php" method="post" enctype="multipart/form-data" >
             <table id="input-table">
                 <tr>
                     <td width='33%'>Edit fullname</td>
@@ -45,9 +45,19 @@ require_once('inc/header-part.php');
                 </tr>
                 <tr>
                     <td>Change Gender</td>
+                    <?php
+
+                    if ($gender == 0) {
+                        $male = null;
+                        $female = "checked";
+                    } else {
+                        $male = "checked";
+                        $female = null;
+                    }
+                    ?>
                     <td>
-                        <label for="male"><input type="radio" name="gender" id="male" value="1" required />Male</label>
-                        <label for="female"><input type="radio" name="gender" id="female" value="0" required />Female</label>
+                        <label for="male"><input type="radio" name="gender" id="male" value="1" required <?= $male ?> />Male</label>
+                        <label for="female"><input type="radio" name="gender" id="female" value="0" required <?= $female ?> />Female</label>
                     </td>
                 </tr>
                 <tr>
@@ -63,9 +73,12 @@ require_once('inc/header-part.php');
                     </td>
                 </tr>
                 <tr>
-                    <td>Change Photo</td>
+                    <td valign=top>Change Photo</td>
                     <td>
-                        <input type="file" name="photo" id="photo" accept="image/*" required>
+                        <input type="file" name="photo" id="photo" accept="image/*" />
+                        <br />
+                        <br />
+                        <img src="images/<?= $photo ?>" alt="" class='teacher-photo' />
                     </td>
                 </tr>
                 <tr>
@@ -79,9 +92,11 @@ require_once('inc/header-part.php');
                     </td>
                 </tr>
             </table>
+            <input type="hidden" name="teacherid" value="<?= $teacherid ?>" />
+            <input type="hidden" name="oldphoto" value="<?= $photo ?>" />
         </form>
     </div>
 </body>
 <?php
-require_once('inc/footer.php');
+    require_once('inc/footer.php');
 ?>
