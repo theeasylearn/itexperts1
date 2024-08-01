@@ -54,7 +54,8 @@ require_once('inc/header-part.php');
                         </td>
                         <td><?= $gender; ?></td>
                         <td>
-                            <?= $qualification; ?>
+                            <?= $qualification; ?> <br/>
+                            <?= $experience; ?> <br/>
                         </td>
                         <td>
                             <a href="edit_teacher.php?teacherid=<?= $id; ?>"><i title="edit" class="fa fa-edit fa-2x"></i></a>
