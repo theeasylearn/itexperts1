@@ -1,0 +1,18 @@
+#customize-controls .control-section-fse-business-blocks .accordion-section-title:hover,
+#customize-controls .control-section-fse-business-blocks .accordion-section-title:focus {
+	background-color: #fff;
+}
+
+.control-section-fse-business-blocks .accordion-section-title .button {
+	margin-top:  -4px;
+	font-weight: 400;
+	margin-left: 8px;
+	background: #ff3f05;
+	color: #fff;
+	border:0px solid #fff;
+}
+
+.rtl .control-section-fse-business-blocks .accordion-section-title .button {
+	margin-left:  0;
+	margin-right: 8px;
+}

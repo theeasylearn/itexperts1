@@ -1,0 +1,26 @@
+<wpml-config>
+  <custom-fields>
+    <custom-field action="copy-once">neve_meta_content_width</custom-field>
+    <custom-field action="copy-once">neve_meta_disable_title</custom-field>
+    <custom-field action="copy-once">neve_meta_sidebar</custom-field>
+    <custom-field action="copy-once">neve_meta_enable_content_width</custom-field>
+    <custom-field action="copy-once">neve_meta_disable_header</custom-field>
+    <custom-field action="copy-once">neve_meta_disable_footer</custom-field>
+  </custom-fields>
+  <admin-texts>
+    <key name="theme_mods_neve">
+      <key name="neve_footer_text"/>
+      <key name="neve_exclusive_products_title"/>
+      <key name="neve_sale_tag_text"/>
+      <key name="neve_metadata_separator"/>
+      <key name="neve_read_more_text"/>
+
+      <key name="neve_post_comment_section_title"/>
+      <key name="neve_post_comment_form_title"/>
+      <key name="neve_post_comment_form_button_text"/>
+      <key name="nav-icon_menu_label"/>
+      <key name="header_search_button_text"/>
+      <key name="header_palette_switch_placeholder"/>
+    </key>
+  </admin-texts>
+</wpml-config>
